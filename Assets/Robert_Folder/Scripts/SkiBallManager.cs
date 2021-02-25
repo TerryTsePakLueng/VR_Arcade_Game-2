@@ -5,10 +5,23 @@ using UnityEngine;
 public class SkiBallManager : MonoBehaviour
 {
     public GameObject ballPreFab;
+    public Transform ballSpawn;
     public int ballsThrown;
 
+    private void Start()
+    {
+        
+    }
     public void RespawnBall()
     {
-        Instantiate(ballPreFab);
+        if(ballsThrown == 9)
+        {
+            Debug.Log("All balls have been thrown");
+        }
+        else
+        {
+            Instantiate(ballPreFab);
+            ballsThrown++;
+        }
     }
 }
