@@ -13,32 +13,32 @@ public class SkeeBallOnTrigger : MonoBehaviour
         skeeballMgr = FindObjectOfType<SkiBallManager>();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(this.holeCategory == holeAmount.Hole10)
-        {
-            RewardManager.instance.SkeeBallPointSystem(10);
-            //if(skeeballMgr.ballsThrown)
-        }
-        else if(this.holeCategory == holeAmount.Hole20)
-        {
-            RewardManager.instance.SkeeBallPointSystem(20);
-        }
-        else if (this.holeCategory == holeAmount.Hole30)
-        {
-            RewardManager.instance.SkeeBallPointSystem(30);
-        }
-        else if (this.holeCategory == holeAmount.Hole40)
-        {
-            RewardManager.instance.SkeeBallPointSystem(40);
-        }
-        else if (this.holeCategory == holeAmount.Hole50)
-        {
-            RewardManager.instance.SkeeBallPointSystem(50);
-        }
-        else if (this.holeCategory == holeAmount.Hole100)
-        {
-            RewardManager.instance.SkeeBallPointSystem(100);
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if(this.holeCategory == holeAmount.Hole10)
+    //    {
+    //        RewardManager.instance.SkeeBallPointSystem(10);
+    //        //if(skeeballMgr.ballsThrown)
+    //    }
+    //    else if(this.holeCategory == holeAmount.Hole20)
+    //    {
+    //        RewardManager.instance.SkeeBallPointSystem(20);
+    //    }
+    //    else if (this.holeCategory == holeAmount.Hole30)
+    //    {
+    //        RewardManager.instance.SkeeBallPointSystem(30);
+    //    }
+    //    else if (this.holeCategory == holeAmount.Hole40)
+    //    {
+    //        RewardManager.instance.SkeeBallPointSystem(40);
+    //    }
+    //    else if (this.holeCategory == holeAmount.Hole50)
+    //    {
+    //        RewardManager.instance.SkeeBallPointSystem(50);
+    //    }
+    //    else if (this.holeCategory == holeAmount.Hole100)
+    //    {
+    //        RewardManager.instance.SkeeBallPointSystem(100);
+    //    }
+    //}
 }
