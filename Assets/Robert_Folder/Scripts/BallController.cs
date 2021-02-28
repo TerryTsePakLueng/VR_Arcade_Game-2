@@ -5,6 +5,7 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     public SkiBallManager skiBallMgr;
+    public float ballDeleteTime;
     private void Awake()
     {
         skiBallMgr = FindObjectOfType<SkiBallManager>();
@@ -12,7 +13,7 @@ public class BallController : MonoBehaviour
 
     IEnumerator ResetBall()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(ballDeleteTime);
         Destroy(gameObject);
         skiBallMgr.RespawnBall();
     }

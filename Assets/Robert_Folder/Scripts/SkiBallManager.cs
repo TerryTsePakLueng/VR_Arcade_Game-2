@@ -5,11 +5,9 @@ using System.Linq;
 
 public class SkiBallManager : MonoBehaviour
 {
-    public SkeeballTriggers skeeBallTriggers;
-    public SkeeBallEnum skeeBallEnum;
-
     public GameObject ballPreFab;
     public Transform ballSpawn;
+    public int totalBallsToThrow;
     public int ballsThrown;
     public int skeeBallPoints;
 
@@ -17,7 +15,7 @@ public class SkiBallManager : MonoBehaviour
 
     public void RespawnBall()
     {
-        if(ballsThrown == 9)
+        if(ballsThrown == totalBallsToThrow)
         {
             Debug.Log("All balls have been thrown");
         }
