@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -133,9 +133,10 @@ GameObject:
   - component: {fileID: 84125051}
   - component: {fileID: 84125050}
   - component: {fileID: 84125049}
+  - component: {fileID: 84125052}
   m_Layer: 0
   m_Name: 50Point_Trigger
-  m_TagString: Untagged
+  m_TagString: Skeeball_Points_Area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,6 +215,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84125047}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &84125052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84125047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e8286773123cf428769b69f233bff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeBallTriggers: 4
+  pointsToAward: 50
 --- !u!1 &162232444
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,9 +624,10 @@ GameObject:
   - component: {fileID: 778594226}
   - component: {fileID: 778594225}
   - component: {fileID: 778594224}
+  - component: {fileID: 778594227}
   m_Layer: 0
   m_Name: 10Point_Trigger
-  m_TagString: Untagged
+  m_TagString: Skeeball_Points_Area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -690,6 +706,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778594222}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &778594227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778594222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e8286773123cf428769b69f233bff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeBallTriggers: 0
+  pointsToAward: 10
 --- !u!1 &979011945
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,7 +830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.152
+      value: -0.53
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -808,7 +838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.592
+      value: -0.29
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -852,9 +882,10 @@ GameObject:
   - component: {fileID: 1027021791}
   - component: {fileID: 1027021790}
   - component: {fileID: 1027021789}
+  - component: {fileID: 1027021792}
   m_Layer: 0
-  m_Name: 25Point_Trigger
-  m_TagString: Untagged
+  m_Name: 20Point_Trigger
+  m_TagString: Skeeball_Points_Area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -933,6 +964,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027021787}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1027021792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027021787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e8286773123cf428769b69f233bff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeBallTriggers: 1
+  pointsToAward: 20
 --- !u!1 &1033586335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,7 +1159,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458546497}
   m_LocalRotation: {x: 0, y: 0, z: -0.078459024, w: 0.99691737}
-  m_LocalPosition: {x: -3.13, y: 0.06, z: -0.052}
+  m_LocalPosition: {x: -3.38, y: 0.27, z: -0.052}
   m_LocalScale: {x: 2.9966161, y: 1, z: 1}
   m_Children:
   - {fileID: 324031683}
@@ -1141,10 +1186,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653cc19ef83b8184ea2406ba3563b7e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skeeBallTriggers: 0
+  skeeBallEnum: {fileID: 0}
   ballPreFab: {fileID: 3360513042405477267, guid: f7322849aee385249afe2c76bd13bfab,
     type: 3}
   ballSpawn: {fileID: 1617535890}
   ballsThrown: 0
+  skeeBallPoints: 0
+  pointsTriggers:
+  - {fileID: 84125047}
+  - {fileID: 1027021787}
+  - {fileID: 778594222}
 --- !u!1 &1466887736
 GameObject:
   m_ObjectHideFlags: 0

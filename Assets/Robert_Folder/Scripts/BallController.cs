@@ -21,4 +21,21 @@ public class BallController : MonoBehaviour
         StartCoroutine(ResetBall());
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Skeeball_Points_Area"))
+        {
+            SkeeballTriggers newPoints = other.GetComponent<SkeeBallEnum>().skeBallTriggers;
+            if(newPoints == null)
+            {
+                return;
+            }
+            else
+            {
+                Debug.Log("You get points!");
+                skiBallMgr.AwardPoints(newPoints);
+            }
+        }
+    }
+
 }
