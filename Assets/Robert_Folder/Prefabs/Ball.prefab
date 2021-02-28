@@ -259,3 +259,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skiBallMgr: {fileID: 0}
+  ballDeleteTime: 3
