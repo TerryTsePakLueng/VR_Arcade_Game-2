@@ -5,10 +5,13 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     public SkiBallManager skiBallMgr;
+    public MilkCansManager milkCansMgr;
+
     public float ballDeleteTime;
     private void Awake()
     {
         skiBallMgr = FindObjectOfType<SkiBallManager>();
+        milkCansMgr = FindObjectOfType<MilkCansManager>();
     }
 
     IEnumerator ResetBall()
@@ -35,6 +38,18 @@ public class BallController : MonoBehaviour
             {
                 Debug.Log("You get points!");
                 skiBallMgr.AwardPoints(newPoints);
+            }
+        }
+        if(other.CompareTag("MilkCan"))
+        {
+            var milkCanCon = GetComponent<MilkCanController>();
+            if(milkCanCon == null)
+            {
+                return;
+            }
+            else
+            {
+                // Get points per can
             }
         }
     }

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ball
   - Skeeball_Points_Area
+  - MilkCansStand
+  - Floor
   layers:
   - Default
   - TransparentFX

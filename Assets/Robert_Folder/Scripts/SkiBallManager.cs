@@ -22,7 +22,6 @@ public class SkiBallManager : MonoBehaviour
         else
         {
             Instantiate(ballPreFab);
-            ballsThrown++;
         }
     }
 
@@ -36,6 +35,7 @@ public class SkiBallManager : MonoBehaviour
         else
         {
             skeeBallPoints += points.GetComponent<SkeeBallEnum>().pointsToAward;
+            ballsThrown++;
         }
     }
 }
