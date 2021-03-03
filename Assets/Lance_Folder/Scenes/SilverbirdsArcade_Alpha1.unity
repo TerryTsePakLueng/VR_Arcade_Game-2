@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 493677970}
   - component: {fileID: 493677969}
   m_Layer: 0
-  m_Name: Bowling_TEMP
+  m_Name: BottleThrow_TEMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
