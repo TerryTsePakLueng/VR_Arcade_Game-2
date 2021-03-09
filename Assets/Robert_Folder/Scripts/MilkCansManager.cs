@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class MilkCansManager : MonoBehaviour
 {
-    public List<GameObject> milkCans;
+    public List<MilkCanController> milkCans;
 
-    public Transform ballSpawn;
-    public GameObject ballPref;
+    public Transform milkCanBallSpawn;
+    public GameObject milkCanBallPrefab;
 
-    public int totalBallsToThrow;
-    public int ballsThrown;
+    public int totalMilkCanBallsToThrow;
+    public int milkCanBallsThrown;
     public int milkcansPoints;
 
     public void AddPointsForMilkCans(int points)
@@ -20,13 +20,22 @@ public class MilkCansManager : MonoBehaviour
 
     public void RespawnBall()
     {
-        if (ballsThrown == totalBallsToThrow)
+        if (milkCanBallsThrown == totalMilkCanBallsToThrow)
         {
             Debug.Log("All balls have been thrown");
         }
         else
         {
-            Instantiate(ballPref);
+            
+            Instantiate(milkCanBallPrefab, milkCanBallSpawn);
+        }
+    }
+
+    public void ResetBottles()
+    {
+        foreach(MilkCanController can in milkCans)
+        {
+            StartCoroutine(can.ResetCans());
         }
     }
 }

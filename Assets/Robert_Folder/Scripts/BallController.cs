@@ -17,8 +17,18 @@ public class BallController : MonoBehaviour
     IEnumerator ResetBall()
     {
         yield return new WaitForSeconds(ballDeleteTime);
-        Destroy(gameObject);
-        skiBallMgr.RespawnBall();
+        if (this.CompareTag("Skeeball_Ball"))
+        {
+            Destroy(gameObject);
+            skiBallMgr.RespawnBall();
+            skiBallMgr.ballsThrown++;
+        }
+        else
+        {
+            Destroy(gameObject);
+            milkCansMgr.RespawnBall();
+            milkCansMgr.milkCanBallsThrown++;
+        }
     }
     public void SpawnNewBall()
     {
@@ -40,18 +50,7 @@ public class BallController : MonoBehaviour
                 skiBallMgr.AwardPoints(newPoints);
             }
         }
-        if(other.CompareTag("MilkCan"))
-        {
-            var milkCanCon = GetComponent<MilkCanController>();
-            if(milkCanCon == null)
-            {
-                return;
-            }
-            else
-            {
-                // Get points per can
-            }
-        }
+
     }
 
 }

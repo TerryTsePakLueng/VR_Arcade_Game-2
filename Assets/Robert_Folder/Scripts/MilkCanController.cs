@@ -9,7 +9,10 @@ public class MilkCanController : MonoBehaviour
     private Vector3 origPos;
     private Quaternion origRot;
     private Rigidbody rb;
+
     public int cansPoints;
+    public bool isKnockedOver;
+    public float canResetTime;
 
     private void Awake()
     {
@@ -20,20 +23,27 @@ public class MilkCanController : MonoBehaviour
     {
         origPos = transform.position;
         origRot = transform.rotation;
+        isKnockedOver = false;
     }
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("MilkCansStand") || other.CompareTag("Floor"))
         {
-            milkCansMgr.AddPointsForMilkCans(cansPoints);
+            if (!isKnockedOver)
+            {
+                milkCansMgr.AddPointsForMilkCans(cansPoints);
+                milkCansMgr.ResetBottles();
+            }
         }
     }
 
-    public void ResetCans()
+    public IEnumerator ResetCans()
     {
+        yield return new WaitForSeconds(canResetTime);
         transform.position = origPos;
         transform.rotation = origRot;
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
+        isKnockedOver = false;
     }
 }
