@@ -23,11 +23,15 @@ public class BallController : MonoBehaviour
             skiBallMgr.RespawnBall();
             skiBallMgr.ballsThrown++;
         }
-        else
+        else if (this.CompareTag("MilkCan_Ball"))
         {
             Destroy(gameObject);
             milkCansMgr.RespawnBall();
             milkCansMgr.milkCanBallsThrown++;
+        }
+        else
+        {
+            Debug.Log("No tag made for ball yet!");
         }
     }
     public void SpawnNewBall()
