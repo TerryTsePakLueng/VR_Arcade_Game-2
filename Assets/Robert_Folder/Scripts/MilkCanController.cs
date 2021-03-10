@@ -31,6 +31,7 @@ public class MilkCanController : MonoBehaviour
         {
             if (!isKnockedOver)
             {
+                isKnockedOver = true;
                 milkCansMgr.AddPointsForMilkCans(cansPoints);
                 milkCansMgr.ResetBottles();
             }

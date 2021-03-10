@@ -21,6 +21,7 @@ public class SkeeballManager : MonoBehaviour
     private void Start()
     {
         skeeBallSessionPointsText.text = skeeBallSessionPoints.ToString();
+        isPlayingSkeeBall = false;
     }
     public void RespawnBall()
     {
@@ -56,6 +57,7 @@ public class SkeeballManager : MonoBehaviour
         {
             isPlayingSkeeBall = true;
             skeeBallSessionPoints = 0;
+            skeeBallSessionPointsText.text = skeeBallSessionPoints.ToString();
             ballsThrown = 0;
             RespawnBall();
         }

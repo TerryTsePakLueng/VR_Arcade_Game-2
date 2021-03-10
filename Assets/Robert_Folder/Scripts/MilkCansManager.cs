@@ -14,8 +14,15 @@ public class MilkCansManager : MonoBehaviour
     public int milkCanBallsThrown;
     public int milkcansSessionPoints;
     public int milkcansTotalPoints;
+    public bool isPlayingMilkCanGame;
 
     public Text milkCansSessionPointsText;
+
+    private void Start()
+    {
+        milkCansSessionPointsText.text = milkcansSessionPoints.ToString();
+        isPlayingMilkCanGame = false;
+    }
     public void AddPointsForMilkCans(int points)
     {
         milkcansSessionPoints += points;
@@ -41,6 +48,21 @@ public class MilkCansManager : MonoBehaviour
         foreach(MilkCanController can in milkCans)
         {
             StartCoroutine(can.ResetCans());
+        }
+    }
+
+    public void StartMilkCanGame()
+    {
+        if(!isPlayingMilkCanGame)
+        {
+            isPlayingMilkCanGame = true;
+            milkcansSessionPoints = 0;
+            milkCanBallsThrown = 0;
+            RespawnBall();
+        }
+        else
+        {
+            Debug.Log("<color=blue>Game is already activated!</color>");
         }
     }
 }
