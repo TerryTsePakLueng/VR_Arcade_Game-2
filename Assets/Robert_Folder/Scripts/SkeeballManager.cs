@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Linq;
 
 public class SkeeballManager : MonoBehaviour
@@ -12,6 +13,8 @@ public class SkeeballManager : MonoBehaviour
     public int skeeBallSessionPoints;
     public int skeeBallTotalPoints;
     public bool isPlayingSkeeBall;
+
+    public Text skeeBallSessionPointsText;
 
     public List<GameObject> pointsTriggers = new List<GameObject>();
 
@@ -39,6 +42,7 @@ public class SkeeballManager : MonoBehaviour
         {
             skeeBallSessionPoints += points.GetComponent<SkeeBallEnum>().pointsToAward;
             skeeBallTotalPoints += points.GetComponent<SkeeBallEnum>().pointsToAward;
+            skeeBallSessionPointsText.text = skeeBallSessionPoints.ToString();
         }
     }
 

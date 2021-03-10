@@ -100,7 +100,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 19e40b0274650ef44b1023aa8802724d,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5084,6 +5084,7 @@ MonoBehaviour:
   skeeBallSessionPoints: 0
   skeeBallTotalPoints: 0
   isPlayingSkeeBall: 0
+  skeeBallSessionPointsText: {fileID: 7966164918855111338}
   pointsTriggers:
   - {fileID: 7966164918855111337}
   - {fileID: 7966164918855111336}
@@ -6289,6 +6290,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7966164918855111330}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7966164918855111338 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1606562619496579396, guid: d3a558994adeb0f40844f4508c4bb4f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 7966164918855111330}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &9152437700165698025 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1265086333153219403, guid: d3a558994adeb0f40844f4508c4bb4f1,
