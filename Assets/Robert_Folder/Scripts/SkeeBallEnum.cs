@@ -12,7 +12,7 @@ public enum SkeeballTriggers
 }
 public class SkeeBallEnum : MonoBehaviour
 {
-    public SkeeballTriggers skeBallTriggers;
+    public SkeeballTriggers skeeBallTriggers;
 
     public int pointsToAward;
 }

@@ -6,11 +6,11 @@ public enum holeAmount { Hole10, Hole20, Hole30, Hole40, Hole50, Hole100}
 public class SkeeBallOnTrigger : MonoBehaviour
 {
     public holeAmount holeCategory;
-    public SkiBallManager skeeballMgr;
+    public SkeeballManager skeeballMgr;
 
     private void Awake()
     {
-        skeeballMgr = FindObjectOfType<SkiBallManager>();
+        skeeballMgr = FindObjectOfType<SkeeballManager>();
     }
 
     //private void OnTriggerEnter(Collider other)

@@ -100,7 +100,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 19e40b0274650ef44b1023aa8802724d,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1824,7 +1824,9 @@ MonoBehaviour:
   ballSpawn: {fileID: 9152437700165698025}
   totalBallsToThrow: 9
   ballsThrown: 0
-  skeeBallPoints: 0
+  skeeBallSessionPoints: 0
+  skeeBallTotalPoints: 0
+  isPlayingSkeeBall: 0
   pointsTriggers:
   - {fileID: 7966164918855111337}
   - {fileID: 7966164918855111336}
@@ -2174,6 +2176,26 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7966164918855111330}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7966164918855111338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2966611296447054960, guid: d3a558994adeb0f40844f4508c4bb4f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 7966164918855111330}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &7966164918855111339
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7966164918855111338}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -9146618070568788744, guid: 11d773284ccbbfc4f8b6fe19c18c1014, type: 3}
 --- !u!4 &9152437700165698025 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1265086333153219403, guid: d3a558994adeb0f40844f4508c4bb4f1,

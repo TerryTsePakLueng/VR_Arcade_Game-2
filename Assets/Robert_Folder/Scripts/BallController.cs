@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
-    public SkiBallManager skiBallMgr;
+    public SkeeballManager skiBallMgr;
     public MilkCansManager milkCansMgr;
 
     public float ballDeleteTime;
     private void Awake()
     {
-        skiBallMgr = FindObjectOfType<SkiBallManager>();
+        skiBallMgr = FindObjectOfType<SkeeballManager>();
         milkCansMgr = FindObjectOfType<MilkCansManager>();
     }
 
@@ -43,7 +43,7 @@ public class BallController : MonoBehaviour
     {
         if(other.CompareTag("Skeeball_Points_Area"))
         {
-            SkeeballTriggers newPoints = other.GetComponent<SkeeBallEnum>().skeBallTriggers;
+            SkeeballTriggers newPoints = other.GetComponent<SkeeBallEnum>().skeeBallTriggers;
             if(newPoints == null)
             {
                 return;
