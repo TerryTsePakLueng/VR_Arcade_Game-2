@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MilkCansManager : MonoBehaviour
 {
@@ -11,11 +12,15 @@ public class MilkCansManager : MonoBehaviour
 
     public int totalMilkCanBallsToThrow;
     public int milkCanBallsThrown;
-    public int milkcansPoints;
+    public int milkcansSessionPoints;
+    public int milkcansTotalPoints;
 
+    public Text milkCansSessionPointsText;
     public void AddPointsForMilkCans(int points)
     {
-        milkcansPoints += points;
+        milkcansSessionPoints += points;
+        milkcansTotalPoints += points;
+        milkCansSessionPointsText.text = milkcansSessionPoints.ToString();
     }
 
     public void RespawnBall()

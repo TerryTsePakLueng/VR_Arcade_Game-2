@@ -8,6 +8,7 @@ public class BallController : MonoBehaviour
     public MilkCansManager milkCansMgr;
 
     public float ballDeleteTime;
+    public bool hasScored = false;
     private void Awake()
     {
         skiBallMgr = FindObjectOfType<SkeeballManager>();
@@ -22,12 +23,14 @@ public class BallController : MonoBehaviour
             Destroy(gameObject);
             skiBallMgr.RespawnBall();
             skiBallMgr.ballsThrown++;
+            hasScored = false;
         }
-        else if (this.CompareTag("MilkCan_Ball"))
+        else if (this.CompareTag("MilkCans_Ball"))
         {
             Destroy(gameObject);
             milkCansMgr.RespawnBall();
             milkCansMgr.milkCanBallsThrown++;
+            hasScored = false;
         }
         else
         {
@@ -50,8 +53,12 @@ public class BallController : MonoBehaviour
             }
             else
             {
-                Debug.Log("You get points!");
-                skiBallMgr.AwardPoints(newPoints);
+                if (!hasScored)
+                {
+                    Debug.Log("You get points!");
+                    skiBallMgr.AwardPoints(newPoints);
+                    hasScored = true;
+                }
             }
         }
 

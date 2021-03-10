@@ -10,6 +10,7 @@ TagManager:
   - Floor
   - MilkCan
   - Skeeball_Ball
+  - MilkCans_Ball
   layers:
   - Default
   - TransparentFX

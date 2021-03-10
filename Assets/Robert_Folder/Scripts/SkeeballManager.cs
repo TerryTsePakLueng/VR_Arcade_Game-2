@@ -18,6 +18,10 @@ public class SkeeballManager : MonoBehaviour
 
     public List<GameObject> pointsTriggers = new List<GameObject>();
 
+    private void Start()
+    {
+        skeeBallSessionPointsText.text = skeeBallSessionPoints.ToString();
+    }
     public void RespawnBall()
     {
         if(ballsThrown == totalBallsToThrow)
