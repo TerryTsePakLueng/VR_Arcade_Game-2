@@ -11,6 +11,7 @@ TagManager:
   - MilkCan
   - Skeeball_Ball
   - MilkCans_Ball
+  - Balloon
   layers:
   - Default
   - TransparentFX
