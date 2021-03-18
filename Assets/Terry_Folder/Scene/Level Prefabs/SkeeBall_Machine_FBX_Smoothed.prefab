@@ -274,8 +274,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: -5.8515214e+20, y: 1.8538196e+9, z: 2.9691547e-24,
-    w: NaN}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1e-45}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -367,7 +366,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 7.05e-43, y: 7.1e-44, z: 0, w: -7.356134e-27}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -552,7 +551,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.7191e-41, z: 0, w: -1.0570971e-17}
+  m_BoundingSphereOverride: {x: 1.6320499e+26, y: NaN, z: 9.0758e-41, w: -1.01103865e-26}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -697,8 +696,8 @@ GameObject:
   - component: {fileID: 1405419161005327360}
   - component: {fileID: 106460578790150563}
   - component: {fileID: 1021839353226344635}
-  - component: {fileID: 176224423227967817}
   - component: {fileID: 173089442626581603}
+  - component: {fileID: 7966164918855111340}
   m_Layer: 0
   m_Name: 100PointTrigger
   m_TagString: Skeeball_Points_Area
@@ -767,20 +766,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &176224423227967817
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30295514443841745}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &173089442626581603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -793,8 +778,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e8286773123cf428769b69f233bff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeeBallTriggers: 0
+  skeeBallTriggers: 5
   pointsToAward: 100
+--- !u!65 &7966164918855111340
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30295514443841745}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.08641372, z: 1.0000001}
+  m_Center: {x: 0.00000024898645, y: 0.956795, z: -0.00000009934107}
 --- !u!1 &45062018598516248
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,8 +898,8 @@ GameObject:
   - component: {fileID: 1762752101860672321}
   - component: {fileID: 2227607676467691914}
   - component: {fileID: 3638139923589216633}
-  - component: {fileID: 5943694375463084895}
   - component: {fileID: 6031781343738595720}
+  - component: {fileID: 7966164918855111359}
   m_Layer: 0
   m_Name: 20PointTrigger
   m_TagString: Skeeball_Points_Area
@@ -970,20 +968,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &5943694375463084895
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 134163623577298777}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &6031781343738595720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,8 +980,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e8286773123cf428769b69f233bff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeeBallTriggers: 0
+  skeeBallTriggers: 1
   pointsToAward: 20
+--- !u!65 &7966164918855111359
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134163623577298777}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.055720307, z: 1.0000001}
+  m_Center: {x: 0.000004031921, y: 0.9721431, z: -0.00000009934107}
 --- !u!1 &826454222431963644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,8 +1006,8 @@ GameObject:
   - component: {fileID: 6777673856278198941}
   - component: {fileID: 2658941529584122482}
   - component: {fileID: 7124321026791608302}
-  - component: {fileID: 6096296099373413195}
   - component: {fileID: 1295267940063908581}
+  - component: {fileID: 7966164918855111363}
   m_Layer: 0
   m_Name: 30PointTrigger
   m_TagString: Skeeball_Points_Area
@@ -1079,20 +1076,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &6096296099373413195
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 826454222431963644}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &1295267940063908581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1105,8 +1088,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e8286773123cf428769b69f233bff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeeBallTriggers: 0
+  skeeBallTriggers: 2
   pointsToAward: 30
+--- !u!65 &7966164918855111363
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826454222431963644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.0719128, z: 1.0000001}
+  m_Center: {x: 0.0000036324727, y: 0.96404773, z: -0.00000009934107}
 --- !u!1 &1043509763083378413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,6 +1321,84 @@ Transform:
   m_Father: {fileID: 7568081148139465453}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1788672845504601659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7258711582324974240}
+  - component: {fileID: 4756617431334922663}
+  - component: {fileID: 2586116415668135571}
+  m_Layer: 0
+  m_Name: ScoreText (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7258711582324974240
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788672845504601659}
+  m_LocalRotation: {x: -0.12199858, y: -0, z: -0, w: 0.9925303}
+  m_LocalPosition: {x: 0, y: 0, z: -286}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7019085800587861502}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -14.015, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -16.27, y: -20.008}
+  m_SizeDelta: {x: 67.462524, y: 40.01634}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4756617431334922663
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788672845504601659}
+  m_CullTransparentMesh: 0
+--- !u!114 &2586116415668135571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788672845504601659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.8735534, b: 0, a: 0.5019608}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 11
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 55
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Remaining:'
 --- !u!1 &2375013135867621174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,6 +1431,8 @@ RectTransform:
   m_Children:
   - {fileID: 6456895958343286307}
   - {fileID: 3167911410832245084}
+  - {fileID: 7258711582324974240}
+  - {fileID: 7072941209552064614}
   m_Father: {fileID: 5589562855159791923}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1703,8 +1779,8 @@ GameObject:
   - component: {fileID: 2665817679773782833}
   - component: {fileID: 5674188312022754350}
   - component: {fileID: 3890913724784825919}
-  - component: {fileID: 5285593466905462033}
   - component: {fileID: 2655290545708568855}
+  - component: {fileID: 6096434251516717206}
   m_Layer: 0
   m_Name: 100PointTrigger_2
   m_TagString: Skeeball_Points_Area
@@ -1773,20 +1849,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &5285593466905462033
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3160253013389735416}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &2655290545708568855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1799,8 +1861,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e8286773123cf428769b69f233bff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeeBallTriggers: 0
+  skeeBallTriggers: 5
   pointsToAward: 100
+--- !u!65 &6096434251516717206
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3160253013389735416}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.074252285, z: 1.0000001}
+  m_Center: {x: 0.00000032907332, y: 0.9628762, z: -0.000007698933}
 --- !u!1 &3517978645711756046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1827,7 +1902,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3517978645711756046}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.924, y: 0.434, z: -0.3595391}
+  m_LocalPosition: {x: -0.745, y: 0.428, z: -0.3595391}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 7568081148139465453}
@@ -1848,7 +1923,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3517978645711756046}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2200,6 +2275,84 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &5391287083877585125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7072941209552064614}
+  - component: {fileID: 2277741169814141288}
+  - component: {fileID: 437556241280999953}
+  m_Layer: 0
+  m_Name: ScoreTextField (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7072941209552064614
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5391287083877585125}
+  m_LocalRotation: {x: -0.12199858, y: -0, z: -0, w: 0.9925303}
+  m_LocalPosition: {x: 0, y: 0, z: -398}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7019085800587861502}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -14.015, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 33.617, y: -20.592}
+  m_SizeDelta: {x: 32.312477, y: 38.848114}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2277741169814141288
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5391287083877585125}
+  m_CullTransparentMesh: 0
+--- !u!114 &437556241280999953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5391287083877585125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.8735534, b: 0, a: 0.5019608}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: d9d2234c225beb3439e42651dc2a085f, type: 3}
+    m_FontSize: 44
+    m_FontStyle: 1
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 44
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '{10}'
 --- !u!1 &5397572828764362339
 GameObject:
   m_ObjectHideFlags: 0
@@ -2211,8 +2364,8 @@ GameObject:
   - component: {fileID: 348389867720942760}
   - component: {fileID: 3316875629223042210}
   - component: {fileID: 203817786711904420}
-  - component: {fileID: 7389930900648564543}
   - component: {fileID: 3966146535395938044}
+  - component: {fileID: 7966164918855111367}
   m_Layer: 0
   m_Name: 50PointTrigger
   m_TagString: Skeeball_Points_Area
@@ -2281,20 +2434,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &7389930900648564543
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5397572828764362339}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &3966146535395938044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2307,8 +2446,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e8286773123cf428769b69f233bff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeeBallTriggers: 0
+  skeeBallTriggers: 4
   pointsToAward: 50
+--- !u!65 &7966164918855111367
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5397572828764362339}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.10515888, z: 1.0000001}
+  m_Center: {x: 0.0000035704481, y: 0.94742537, z: -0.00000009934107}
 --- !u!1 &5431002381685029843
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,8 +2566,8 @@ GameObject:
   - component: {fileID: 353737585355662622}
   - component: {fileID: 2079744117040868875}
   - component: {fileID: 2744886324386657944}
-  - component: {fileID: 5774574945320716520}
   - component: {fileID: 8701316498454519175}
+  - component: {fileID: 7966164918855111355}
   m_Layer: 0
   m_Name: 10PointTrigger
   m_TagString: Skeeball_Points_Area
@@ -2484,20 +2636,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &5774574945320716520
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5751007336639777738}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2.0447414
-  m_Direction: 1
-  m_Center: {x: 0.00000005266893, y: 0.022370515, z: -0.00000009934107}
 --- !u!114 &8701316498454519175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2512,6 +2650,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skeeBallTriggers: 0
   pointsToAward: 10
+--- !u!65 &7966164918855111355
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5751007336639777738}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.11275709, z: 1.0000001}
+  m_Center: {x: 0.000001948671, y: 0.94362676, z: -0.00000009934107}
 --- !u!1 &5961752209197359644
 GameObject:
   m_ObjectHideFlags: 0
@@ -2696,8 +2847,8 @@ GameObject:
   - component: {fileID: 7228366468439381825}
   - component: {fileID: 3924867953164907750}
   - component: {fileID: 3209919641171288231}
-  - component: {fileID: 2925740210130584201}
   - component: {fileID: 6547212150709039495}
+  - component: {fileID: 7966164918855111371}
   m_Layer: 0
   m_Name: 40PointTrigger
   m_TagString: Skeeball_Points_Area
@@ -2766,20 +2917,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &2925740210130584201
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6575405673204038273}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &6547212150709039495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2792,8 +2929,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e8286773123cf428769b69f233bff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeeBallTriggers: 0
+  skeeBallTriggers: 3
   pointsToAward: 40
+--- !u!65 &7966164918855111371
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6575405673204038273}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.07729918, z: 1.0000001}
+  m_Center: {x: 0.0000019422396, y: 0.96135426, z: -0.00000009934107}
 --- !u!1 &6749370965846894717
 GameObject:
   m_ObjectHideFlags: 0
@@ -2969,8 +3119,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -14.015, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.1, y: 31.16}
-  m_SizeDelta: {x: 99.74075, y: 40.01634}
+  m_AnchoredPosition: {x: -24.985, y: 31.16}
+  m_SizeDelta: {x: 49.970337, y: 40.01634}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4980902354064988196
 CanvasRenderer:
@@ -3000,7 +3150,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d9d2234c225beb3439e42651dc2a085f, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 44
     m_FontStyle: 1
     m_BestFit: 1
@@ -3012,7 +3162,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: 'Score: '
 --- !u!1 &8364214889952706046
 GameObject:
   m_ObjectHideFlags: 0
@@ -3047,8 +3197,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -14.015, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.1, y: -18.5}
-  m_SizeDelta: {x: 99.74075, y: 40.01634}
+  m_AnchoredPosition: {x: 24.885, y: 30.576}
+  m_SizeDelta: {x: 49.770203, y: 38.848114}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4297534138255586304
 CanvasRenderer:
@@ -3079,10 +3229,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d9d2234c225beb3439e42651dc2a085f, type: 3}
-    m_FontSize: 44
+    m_FontSize: 19
     m_FontStyle: 1
     m_BestFit: 1
-    m_MinSize: 10
+    m_MinSize: 9
     m_MaxSize: 44
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -3090,7 +3240,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '{100}'
+  m_Text: '{10}'
 --- !u!1 &8731859819207775602
 GameObject:
   m_ObjectHideFlags: 0
