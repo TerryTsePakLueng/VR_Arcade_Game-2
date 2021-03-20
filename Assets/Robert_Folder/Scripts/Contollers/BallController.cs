@@ -47,19 +47,14 @@ public class BallController : MonoBehaviour
         if(other.CompareTag("Skeeball_Points_Area"))
         {
             SkeeballTriggers newPoints = other.GetComponent<SkeeBallEnum>().skeeBallTriggers;
-            if(newPoints == null)
+
+            if (!hasScored)
             {
-                return;
+                Debug.Log("You get points!");
+                skiBallMgr.AwardPoints(newPoints);
+                hasScored = true;
             }
-            else
-            {
-                if (!hasScored)
-                {
-                    Debug.Log("You get points!");
-                    skiBallMgr.AwardPoints(newPoints);
-                    hasScored = true;
-                }
-            }
+            
         }
 
     }

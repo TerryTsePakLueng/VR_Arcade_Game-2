@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class BalloonController : MonoBehaviour
 {
+    public BalloonGameManager balloonGameMgr;
     public float balloonSpeed;
     public int balloonPoints;
 
+    private void Awake()
+    {
+        balloonGameMgr = FindObjectOfType<BalloonGameManager>();
+    }
     private void Update()
     {
         transform.Translate(Vector3.up * balloonSpeed * Time.deltaTime);
@@ -16,7 +21,9 @@ public class BalloonController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Roof"))
         {
-            Destroy(collision.gameObject);
+            gameObject.SetActive(false);
+            balloonGameMgr.balloonsPopped++;
+            balloonGameMgr.BalloonGameOver();
         }
     }
 }

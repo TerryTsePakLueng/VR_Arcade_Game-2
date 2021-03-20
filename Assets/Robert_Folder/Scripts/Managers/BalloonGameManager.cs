@@ -59,7 +59,6 @@ public class BalloonGameManager : MonoBehaviour
             GameObject go = Instantiate(balloonPrefab, balloonSpawnLocations[balloonLocation]);
             go.GetComponentInChildren<MeshRenderer>().material = balloonMaterial[balloonMat];
             
-            balloonsPopped++;
         }
     }
 
