@@ -12,14 +12,17 @@ public class MilkCansManager : MonoBehaviour
 
     public int totalMilkCanBallsToThrow;
     public int milkCanBallsThrown;
+    public int milkCanBallsLeft;
     public int milkcansSessionPoints;
     public int milkcansTotalPoints;
     public bool isPlayingMilkCanGame;
 
     public Text milkCansSessionPointsText;
+    public Text milkCansBallLeftToThrowText;
 
     private void Start()
     {
+        milkCansBallLeftToThrowText.text = totalMilkCanBallsToThrow.ToString();
         milkCansSessionPointsText.text = milkcansSessionPoints.ToString();
         isPlayingMilkCanGame = false;
     }
@@ -32,9 +35,10 @@ public class MilkCansManager : MonoBehaviour
 
     public void RespawnBall()
     {
-        if (milkCanBallsThrown == totalMilkCanBallsToThrow)
+        if (milkCanBallsThrown >= totalMilkCanBallsToThrow)
         {
             Debug.Log("All balls have been thrown");
+            isPlayingMilkCanGame = false;
         }
         else
         {
@@ -58,6 +62,9 @@ public class MilkCansManager : MonoBehaviour
             isPlayingMilkCanGame = true;
             milkcansSessionPoints = 0;
             milkCanBallsThrown = 0;
+            milkCanBallsLeft = totalMilkCanBallsToThrow - milkCanBallsThrown;
+            milkCansBallLeftToThrowText.text = milkCanBallsLeft.ToString();
+            
             RespawnBall();
         }
         else
