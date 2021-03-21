@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Terry_Folder/Scene/Scene_Terry.unity
     guid: 79c7ccc402e24b849ae786fb20e63b1a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Terry_Folder/Scene/TestScene_Main.unity
     guid: 2cd7210aed66bd4479aeb5af016f6872
-  - enabled: 1
+  - enabled: 0
     path: Assets/Robert_Folder/Scenes/Rob_Scene.unity
     guid: a8d18053b6e29824d8be9e357f892af0
   - enabled: 1

@@ -22,7 +22,7 @@ public class SkeeballManager : MonoBehaviour
 
     private void Start()
     {
-        skeeBallBallsLeftToThrowText.text = totalBallsToThrow.ToString();
+        skeeBallBallsLeftToThrowText.text = 0.ToString();
         skeeBallSessionPointsText.text = skeeBallSessionPoints.ToString();
         isPlayingSkeeBall = false;
     }
@@ -60,9 +60,10 @@ public class SkeeballManager : MonoBehaviour
         {
             isPlayingSkeeBall = true;
             skeeBallSessionPoints = 0;
-            skeeBallSessionPointsText.text = skeeBallSessionPoints.ToString();
             ballsThrown = 0;
             ballsLeftToThrow = 9;
+            skeeBallBallsLeftToThrowText.text = ballsLeftToThrow.ToString();
+            skeeBallSessionPointsText.text = skeeBallSessionPoints.ToString();
             RespawnBall();
         }
         else

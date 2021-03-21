@@ -22,7 +22,7 @@ public class MilkCansManager : MonoBehaviour
 
     private void Start()
     {
-        milkCansBallLeftToThrowText.text = totalMilkCanBallsToThrow.ToString();
+        milkCansBallLeftToThrowText.text = 0.ToString();
         milkCansSessionPointsText.text = milkcansSessionPoints.ToString();
         isPlayingMilkCanGame = false;
     }
@@ -61,6 +61,7 @@ public class MilkCansManager : MonoBehaviour
         {
             isPlayingMilkCanGame = true;
             milkcansSessionPoints = 0;
+            milkCansSessionPointsText.text = milkcansSessionPoints.ToString();
             milkCanBallsThrown = 0;
             milkCanBallsLeft = totalMilkCanBallsToThrow - milkCanBallsThrown;
             milkCansBallLeftToThrowText.text = milkCanBallsLeft.ToString();
