@@ -10,22 +10,25 @@ public class SkeeballManager : MonoBehaviour
     public Transform ballSpawn;
     public int totalBallsToThrow;
     public int ballsThrown;
+    public int ballsLeftToThrow;
     public int skeeBallSessionPoints;
     public int skeeBallTotalPoints;
     public bool isPlayingSkeeBall;
 
     public Text skeeBallSessionPointsText;
+    public Text skeeBallBallsLeftToThrowText;
 
     public List<GameObject> pointsTriggers = new List<GameObject>();
 
     private void Start()
     {
+        skeeBallBallsLeftToThrowText.text = totalBallsToThrow.ToString();
         skeeBallSessionPointsText.text = skeeBallSessionPoints.ToString();
         isPlayingSkeeBall = false;
     }
     public void RespawnBall()
     {
-        if(ballsThrown == totalBallsToThrow)
+        if(ballsThrown >= totalBallsToThrow)
         {
             Debug.Log("All balls have been thrown");
             isPlayingSkeeBall = false;
@@ -59,6 +62,7 @@ public class SkeeballManager : MonoBehaviour
             skeeBallSessionPoints = 0;
             skeeBallSessionPointsText.text = skeeBallSessionPoints.ToString();
             ballsThrown = 0;
+            ballsLeftToThrow = 9;
             RespawnBall();
         }
         else

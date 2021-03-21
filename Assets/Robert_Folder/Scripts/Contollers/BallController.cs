@@ -24,6 +24,12 @@ public class BallController : MonoBehaviour
             skiBallMgr.RespawnBall();
             skiBallMgr.ballsThrown++;
             hasScored = false;
+            skiBallMgr.ballsLeftToThrow = skiBallMgr.totalBallsToThrow - skiBallMgr.ballsThrown;
+            if(skiBallMgr.ballsLeftToThrow < 0)
+            {
+                skiBallMgr.ballsLeftToThrow = 0;
+            }
+            skiBallMgr.skeeBallBallsLeftToThrowText.text = skiBallMgr.ballsLeftToThrow.ToString();
         }
         else if (this.CompareTag("MilkCans_Ball"))
         {
@@ -31,6 +37,12 @@ public class BallController : MonoBehaviour
             milkCansMgr.RespawnBall();
             milkCansMgr.milkCanBallsThrown++;
             hasScored = false;
+            milkCansMgr.milkCanBallsLeft = milkCansMgr.totalMilkCanBallsToThrow - milkCansMgr.milkCanBallsThrown;
+            if(milkCansMgr.milkCanBallsLeft < 0)
+            {
+                milkCansMgr.milkCanBallsLeft = 0;
+            }
+            milkCansMgr.milkCansBallLeftToThrowText.text = milkCansMgr.milkCanBallsLeft.ToString();
         }
         else
         {

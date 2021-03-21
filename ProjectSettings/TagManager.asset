@@ -12,6 +12,7 @@ TagManager:
   - Skeeball_Ball
   - MilkCans_Ball
   - Balloon
+  - Roof
   layers:
   - Default
   - TransparentFX
