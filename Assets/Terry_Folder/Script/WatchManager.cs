@@ -35,14 +35,14 @@ public class WatchManager : MonoBehaviour
     {
         watchMainMenuCanvas.SetActive(false);
         watchAnimator.SetBool("isOpen", false);
-        DelayScreenAppearingForMyTickets();
+        StartCoroutine(DelayScreenAppearingForMyTickets());
     }
 
     public void OnBackButtonPress()
     {
         watchMyTicketsCanvas.SetActive(false);
         watchAnimator.SetBool("isOpen", false);
-        DelayScreenAppearingForBack();
+        StartCoroutine(DelayScreenAppearingForBack());
     }
 
     IEnumerator DelayScreenAppearingForMyTickets()
