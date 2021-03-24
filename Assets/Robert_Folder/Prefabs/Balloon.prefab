@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e1813294f1fd3ac46ad796f73f4c60d1, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -89,8 +89,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3511460329484157790}
   - component: {fileID: 8250632239149335967}
-  - component: {fileID: 867096008}
   - component: {fileID: 867096009}
+  - component: {fileID: 6780073231315543571}
   m_Layer: 0
   m_Name: Balloon
   m_TagString: Balloon
@@ -126,7 +126,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.1465258
   m_Center: {x: 0, y: 0.021737397, z: 0}
---- !u!54 &867096008
+--- !u!114 &867096009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8136224666139831295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4f6fb18ba46aa48bf900993fe20b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balloonGameMgr: {fileID: 0}
+  balloonSpeed: 1.11
+  balloonPoints: 25
+--- !u!54 &6780073231315543571
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,17 +157,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &867096009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8136224666139831295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc4f6fb18ba46aa48bf900993fe20b4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balloonSpeed: 1.11
-  balloonPoints: 25

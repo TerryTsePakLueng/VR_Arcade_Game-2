@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class MilkCansManager : MonoBehaviour
 {
-    public List<MilkCanController> milkCans;
+    public ObjectPoolManager opm;
 
+    public List<MilkCanController> milkCans;
     public Transform milkCanBallSpawn;
-    public GameObject milkCanBallPrefab;
 
     public int totalMilkCanBallsToThrow;
     public int milkCanBallsThrown;
@@ -22,6 +22,7 @@ public class MilkCansManager : MonoBehaviour
 
     private void Start()
     {
+        opm = FindObjectOfType<ObjectPoolManager>();
         milkCansBallLeftToThrowText.text = 0.ToString();
         milkCansSessionPointsText.text = milkcansSessionPoints.ToString();
         isPlayingMilkCanGame = false;
@@ -42,9 +43,10 @@ public class MilkCansManager : MonoBehaviour
         }
         else
         {
-            Transform newMilkCanBall = ObjectPoolManager.instance.GetObject(ObjectPoolManager.instance.allMilkCanBallsCreated).transform;
+            Transform newMilkCanBall = opm.GetObject(opm.allMilkCanBallsCreated).transform;
             newMilkCanBall.transform.position = milkCanBallSpawn.transform.position;
             newMilkCanBall.gameObject.SetActive(true);
+            newMilkCanBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
             //Instantiate(milkCanBallPrefab, milkCanBallSpawn);
         }
     }

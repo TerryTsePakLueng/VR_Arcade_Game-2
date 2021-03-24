@@ -6,7 +6,8 @@ using System.Linq;
 
 public class SkeeballManager : MonoBehaviour
 {
-    public GameObject ballPreFab;
+    public ObjectPoolManager opm;
+
     public Transform ballSpawn;
     public int totalBallsToThrow;
     public int ballsThrown;
@@ -22,6 +23,7 @@ public class SkeeballManager : MonoBehaviour
 
     private void Start()
     {
+        opm = FindObjectOfType<ObjectPoolManager>();
         skeeBallBallsLeftToThrowText.text = 0.ToString();
         skeeBallSessionPointsText.text = skeeBallSessionPoints.ToString();
         isPlayingSkeeBall = false;
@@ -35,9 +37,10 @@ public class SkeeballManager : MonoBehaviour
         }
         else
         {
-            Transform newSkeeBall = ObjectPoolManager.instance.GetObject(ObjectPoolManager.instance.allSkeeBallsCreated).transform;
+            Transform newSkeeBall = opm.GetObject(opm.allSkeeBallsCreated).transform;
             newSkeeBall.transform.position = ballSpawn.transform.position;
             newSkeeBall.gameObject.SetActive(true);
+            newSkeeBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
             //Instantiate(ballPreFab, ballSpawn);
         }
     }

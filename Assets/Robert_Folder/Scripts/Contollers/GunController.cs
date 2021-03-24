@@ -5,6 +5,7 @@ using Valve.VR;
 
 public class GunController : MonoBehaviour
 {
+    public ObjectPoolManager opm;
     public BalloonGameManager balloonGameMgr;
 
     public Transform gunNozzle;
@@ -16,6 +17,7 @@ public class GunController : MonoBehaviour
     {
         SteamVR_Actions.default_GrabPinch.AddOnStateDownListener(TriggerPressed, SteamVR_Input_Sources.Any);
         balloonGameMgr = FindObjectOfType<BalloonGameManager>();
+        opm = FindObjectOfType<ObjectPoolManager>();
         
     }
 
@@ -33,20 +35,19 @@ public class GunController : MonoBehaviour
         }
         if (isHoldingGun && balloonGameMgr.isPlayingBalloonGame)
         {
-            ShootGun();
+            if (balloonGameMgr.shotsTaken <= balloonGameMgr.totalShotsToTake)
+            {
+                Transform newBullet = opm.GetObject(opm.allCreatedbullets).transform;
+                newBullet.transform.position = gunNozzle.transform.position;
+                newBullet.gameObject.SetActive(true);
+                balloonGameMgr.shotsTaken++;
+                Debug.Log("Gun fired!");
+            }
+            else
+            {
+                Debug.Log("No ammo left!");
+            }
         }
     }
 
-    public void ShootGun()
-    {
-        if (balloonGameMgr.shotsTaken <= balloonGameMgr.totalShotsToTake)
-        {
-            balloonGameMgr.shotsTaken++;
-            Debug.Log("Gun fired!");  
-        }
-        else
-        {
-            Debug.Log("No ammo left!");
-        }
-    }
 }

@@ -13,6 +13,7 @@ TagManager:
   - MilkCans_Ball
   - Balloon
   - Roof
+  - Bullet
   layers:
   - Default
   - TransparentFX

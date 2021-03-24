@@ -31,10 +31,10 @@ public class ObjectPoolManager : MonoBehaviour
     }
     private void Start()
     {
-        //for(int i = 0; i < bulletSpawnAmount; i++)
-        //{
-        //    CreateObject(bulletPrefab, allCreatedbullets);
-        //}
+        for(int i = 0; i < bulletSpawnAmount; i++)
+        {
+            CreateObject(bulletPrefab, allCreatedbullets);
+        }
         for (int i = 0; i < skeeBallSpawnAmount; i++)
         {
             CreateObject(skeeBallPrefab, allSkeeBallsCreated);

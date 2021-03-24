@@ -192,12 +192,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef46935a977702f428f523bda97c2a9b, type: 3}
---- !u!4 &3237639 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7134520829481973178, guid: ef46935a977702f428f523bda97c2a9b,
-    type: 3}
-  m_PrefabInstance: {fileID: 3237638}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4607344
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,6 +870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7355766e1c3d15b4398d0b327ff5c491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  opm: {fileID: 0}
   milkCans:
   - {fileID: 9078129117950127409}
   - {fileID: 1930647370}
@@ -884,8 +879,6 @@ MonoBehaviour:
   - {fileID: 1335558766}
   - {fileID: 1487628055}
   milkCanBallSpawn: {fileID: 1011338441}
-  milkCanBallPrefab: {fileID: 1759683503557273394, guid: f5ca6a8cef22a3d4da07fcf11963c4be,
-    type: 3}
   totalMilkCanBallsToThrow: 5
   milkCanBallsThrown: 0
   milkCanBallsLeft: 5
@@ -3475,7 +3468,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 524662129}
-  - component: {fileID: 524662130}
   m_Layer: 0
   m_Name: AWP
   m_TagString: Untagged
@@ -3498,23 +3490,6 @@ Transform:
   m_Father: {fileID: 1319205537}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &524662130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 524662128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ce0f40eaeeb82f479d49ac8b38ac386, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balloonGameMgr: {fileID: 0}
-  gunNozzle: {fileID: 3237639}
-  muzzleFlash: {fileID: 0}
-  balloonPop: {fileID: 0}
-  isHoldingGun: 0
 --- !u!1 &540878102
 GameObject:
   m_ObjectHideFlags: 0
@@ -4774,7 +4749,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c8232ab740f3cc4e9cf88eb10e62999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 3585652199813828675, guid: 5f9f6bda4c646dc41bdcf897c74ed8aa,
+    type: 3}
   skeeBallPrefab: {fileID: 1759683503557273394, guid: 523ff65cb06c53f429c2cebe9dc15c69,
     type: 3}
   milkCanBallPrefab: {fileID: 1759683503557273394, guid: f5ca6a8cef22a3d4da07fcf11963c4be,
@@ -4784,7 +4760,7 @@ MonoBehaviour:
   bulletSpawnAmount: 10
   skeeBallSpawnAmount: 2
   milkCanBallSpawnAmount: 2
-  balloonSpawnAmount: 5
+  balloonSpawnAmount: 10
   allCreatedbullets: []
   allSkeeBallsCreated: []
   allMilkCanBallsCreated: []
@@ -7156,6 +7132,99 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0989d878ef2d74c44b4c7ac19551ff67, type: 3}
+--- !u!1 &1259876340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1259876341}
+  - component: {fileID: 1259876344}
+  - component: {fileID: 1259876343}
+  - component: {fileID: 1259876342}
+  m_Layer: 0
+  m_Name: Stand (1)
+  m_TagString: Floor
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1259876341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259876340}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.787, y: -0.939, z: -1.6471}
+  m_LocalScale: {x: 10.025945, y: 0.12212239, z: 6.9583225}
+  m_Children: []
+  m_Father: {fileID: 1262994901}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1259876342
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259876340}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1259876343
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259876340}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8bc715d216b709649bfd11485d44dce7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1259876344
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259876340}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1260109055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0989d878ef2d74c44b4c7ac19551ff67,
@@ -7192,6 +7261,7 @@ Transform:
   - {fileID: 443368252}
   - {fileID: 821348979}
   - {fileID: 855041391}
+  - {fileID: 1259876341}
   m_Father: {fileID: 113746666}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7444,8 +7514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11452e565ac009946a2d696fa9782ac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balloonPrefab: {fileID: 8136224666139831295, guid: cedf5386ab647c34db981a8e3e7bb28a,
-    type: 3}
+  opm: {fileID: 0}
   balloonGameSessionPoints: 0
   balloonGameTotalPoints: 0
   totalShotsToTake: 10
@@ -8815,7 +8884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -6.383
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10462,7 +10531,7 @@ MonoBehaviour:
   dropEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 524662130}
+      - m_Target: {fileID: 0}
         m_MethodName: DropGun
         m_Mode: 1
         m_Arguments:
@@ -11081,8 +11150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653cc19ef83b8184ea2406ba3563b7e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballPreFab: {fileID: 1759683503557273394, guid: 523ff65cb06c53f429c2cebe9dc15c69,
-    type: 3}
+  opm: {fileID: 0}
   ballSpawn: {fileID: 9152437700165698025}
   totalBallsToThrow: 9
   ballsThrown: 0
@@ -12526,6 +12594,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1908948323}
     m_Modifications:
+    - target: {fileID: 353473820, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 3.07e-43
+      objectReference: {fileID: 0}
+    - target: {fileID: 353473820, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: -2.2407083e+20
+      objectReference: {fileID: 0}
+    - target: {fileID: 353473820, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: -4.1517657e-27
+      objectReference: {fileID: 0}
+    - target: {fileID: 353473820, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 7.22e-43
+      objectReference: {fileID: 0}
+    - target: {fileID: 399661047, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 8e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 399661047, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 399661047, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 399661047, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: NaN
+      objectReference: {fileID: 0}
+    - target: {fileID: 802582456, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 1e-45
+      objectReference: {fileID: 0}
+    - target: {fileID: 802582456, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 802582456, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 802582456, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: -0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 2586116415668135571, guid: d3a558994adeb0f40844f4508c4bb4f1,
         type: 3}
       propertyPath: m_FontData.m_FontSize

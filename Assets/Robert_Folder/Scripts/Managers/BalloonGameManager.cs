@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class BalloonGameManager : MonoBehaviour
 {
+    public ObjectPoolManager opm;
 
-    public GameObject balloonPrefab;
     public int balloonGameSessionPoints;
     public int balloonGameTotalPoints;
     public int totalShotsToTake;
@@ -25,6 +25,7 @@ public class BalloonGameManager : MonoBehaviour
 
     private void Start()
     {
+        opm = FindObjectOfType<ObjectPoolManager>();
         balloonGameShotsLeftText.text = shotsLeftToTake.ToString();
         balloonGameSessionPointsText.text = balloonGameSessionPoints.ToString();
         isPlayingBalloonGame = false;
@@ -67,7 +68,7 @@ public class BalloonGameManager : MonoBehaviour
             //GameObject go = Instantiate(balloonPrefab, balloonSpawnLocations[balloonLocation]);
             //go.GetComponentInChildren<MeshRenderer>().material = balloonMaterial[balloonMat];
 
-            Transform newBalloon = ObjectPoolManager.instance.GetObject(ObjectPoolManager.instance.allBalloonsCreated).transform;
+            Transform newBalloon = opm.GetObject(opm.allBalloonsCreated).transform;
             newBalloon.transform.position = balloonSpawnLocations[balloonLocation].transform.position;
             newBalloon.GetComponentInChildren<MeshRenderer>().material = balloonMaterial[balloonMat];
             newBalloon.gameObject.SetActive(true);
