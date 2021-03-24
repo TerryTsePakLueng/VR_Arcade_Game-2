@@ -6,14 +6,16 @@ using UnityEngine.UI;
 public class WatchManager : MonoBehaviour
 {
     public Animator watchAnimator;
+
     public GameObject watchMainMenuCanvas;
     public GameObject watchMyTicketsCanvas;
     public GameObject watchMyScoreCanvas;
+
     public bool isOpen = false;
 
     public void Start()
     {
-
+        DontDestroyOnLoad(gameObject);
     }
 
     public void OnButtonPress()
