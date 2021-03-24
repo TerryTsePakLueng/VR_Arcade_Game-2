@@ -8,6 +8,7 @@ public class WatchManager : MonoBehaviour
     public Animator watchAnimator;
     public GameObject watchMainMenuCanvas;
     public GameObject watchMyTicketsCanvas;
+    public GameObject watchMyScoreCanvas;
     public bool isOpen = false;
 
     public void Start()
@@ -41,8 +42,16 @@ public class WatchManager : MonoBehaviour
     public void OnBackButtonPress()
     {
         watchMyTicketsCanvas.SetActive(false);
+        watchMyScoreCanvas.SetActive(false);
         watchAnimator.SetBool("isOpen", false);
         StartCoroutine(DelayScreenAppearingForBack());
+    }
+
+    public void OnMyScoreButtonPress()
+    {
+        watchMainMenuCanvas.SetActive(false);
+        watchAnimator.SetBool("isOpen", false);
+        StartCoroutine(DelayScreenAppearingForMyScore());
     }
 
     IEnumerator DelayScreenAppearingForMyTickets()
@@ -57,5 +66,17 @@ public class WatchManager : MonoBehaviour
         yield return new WaitForSeconds(1.1f);
         watchMainMenuCanvas.SetActive(true);
         watchAnimator.SetBool("isOpen", true);
+    }
+
+    IEnumerator DelayScreenAppearingForMyScore()
+    {
+        yield return new WaitForSeconds(1.1f);
+        watchMyScoreCanvas.SetActive(true);
+        watchAnimator.SetBool("isOpen", true);
+    }
+
+    public void OnQuitButtonPress()
+    {
+        Application.Quit();
     }
 }
