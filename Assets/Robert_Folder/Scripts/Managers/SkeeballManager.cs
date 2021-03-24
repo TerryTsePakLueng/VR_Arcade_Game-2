@@ -41,7 +41,6 @@ public class SkeeballManager : MonoBehaviour
             newSkeeBall.transform.position = ballSpawn.transform.position;
             newSkeeBall.gameObject.SetActive(true);
             newSkeeBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            //Instantiate(ballPreFab, ballSpawn);
         }
     }
 

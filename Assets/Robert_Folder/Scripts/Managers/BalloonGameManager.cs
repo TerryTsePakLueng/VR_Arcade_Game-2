@@ -38,8 +38,9 @@ public class BalloonGameManager : MonoBehaviour
             isPlayingBalloonGame = true;
             balloonGameSessionPoints = 0;
             balloonsPopped = 0;
-         //   balloonGameSessionPointsText.text = balloonGameSessionPoints.ToString();
+            balloonGameSessionPointsText.text = balloonGameSessionPoints.ToString();
             shotsTaken = 0;
+            balloonGameShotsLeftText.text = shotsLeftToTake.ToString();
             StartCoroutine(SpawnNewBalloons());
         }
         else
@@ -53,8 +54,8 @@ public class BalloonGameManager : MonoBehaviour
         balloonGameTotalPoints += points;
         balloonGameSessionPoints += points;
         balloonGameSessionPointsText.text = balloonGameSessionPoints.ToString();
-       // shotsLeftToTake = totalShotsToTake - shotsTaken;
-       // balloonGameShotsLeftText.text = shotsLeftToTake.ToString();
+        shotsLeftToTake = totalShotsToTake - shotsTaken;
+        balloonGameShotsLeftText.text = shotsLeftToTake.ToString();
     }
 
     public IEnumerator SpawnNewBalloons()
@@ -64,9 +65,6 @@ public class BalloonGameManager : MonoBehaviour
             yield return new WaitForSeconds(balloonSpawnDelayTime);
             int balloonLocation = Random.Range(0, balloonSpawnLocations.Count);
             int balloonMat = Random.Range(0, balloonMaterial.Count);
-
-            //GameObject go = Instantiate(balloonPrefab, balloonSpawnLocations[balloonLocation]);
-            //go.GetComponentInChildren<MeshRenderer>().material = balloonMaterial[balloonMat];
 
             Transform newBalloon = opm.GetObject(opm.allBalloonsCreated).transform;
             newBalloon.transform.position = balloonSpawnLocations[balloonLocation].transform.position;

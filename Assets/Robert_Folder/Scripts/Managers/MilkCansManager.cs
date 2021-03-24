@@ -47,7 +47,6 @@ public class MilkCansManager : MonoBehaviour
             newMilkCanBall.transform.position = milkCanBallSpawn.transform.position;
             newMilkCanBall.gameObject.SetActive(true);
             newMilkCanBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            //Instantiate(milkCanBallPrefab, milkCanBallSpawn);
         }
     }
 

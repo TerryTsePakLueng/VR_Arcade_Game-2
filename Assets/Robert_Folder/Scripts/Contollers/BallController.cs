@@ -21,7 +21,6 @@ public class BallController : MonoBehaviour
         if (this.CompareTag("Skeeball_Ball"))
         {
             gameObject.SetActive(false);
-            //Destroy(gameObject);
             skiBallMgr.RespawnBall();
             skiBallMgr.ballsThrown++;
             hasScored = false;
@@ -35,7 +34,6 @@ public class BallController : MonoBehaviour
         else if (this.CompareTag("MilkCans_Ball"))
         {
             gameObject.SetActive(false);
-            //Destroy(gameObject);
             milkCansMgr.RespawnBall();
             milkCansMgr.milkCanBallsThrown++;
             hasScored = false;
