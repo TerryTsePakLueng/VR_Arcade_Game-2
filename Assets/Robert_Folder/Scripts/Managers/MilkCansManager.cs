@@ -42,8 +42,10 @@ public class MilkCansManager : MonoBehaviour
         }
         else
         {
-            
-            Instantiate(milkCanBallPrefab, milkCanBallSpawn);
+            Transform newMilkCanBall = ObjectPoolManager.instance.GetObject(ObjectPoolManager.instance.allMilkCanBallsCreated).transform;
+            newMilkCanBall.transform.position = milkCanBallSpawn.transform.position;
+            newMilkCanBall.gameObject.SetActive(true);
+            //Instantiate(milkCanBallPrefab, milkCanBallSpawn);
         }
     }
 

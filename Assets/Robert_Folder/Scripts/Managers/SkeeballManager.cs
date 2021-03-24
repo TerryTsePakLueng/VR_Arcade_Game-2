@@ -35,7 +35,10 @@ public class SkeeballManager : MonoBehaviour
         }
         else
         {
-            Instantiate(ballPreFab, ballSpawn);
+            Transform newSkeeBall = ObjectPoolManager.instance.GetObject(ObjectPoolManager.instance.allSkeeBallsCreated).transform;
+            newSkeeBall.transform.position = ballSpawn.transform.position;
+            newSkeeBall.gameObject.SetActive(true);
+            //Instantiate(ballPreFab, ballSpawn);
         }
     }
 

@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.VR;
 using Valve.VR;
 
 public class GunController : MonoBehaviour
 {
     public BalloonGameManager balloonGameMgr;
+
+    public Transform gunNozzle;
+    public ParticleSystem muzzleFlash;
+    public ParticleSystem balloonPop;
 
     public bool isHoldingGun = false;
     private void Start()
@@ -14,6 +17,11 @@ public class GunController : MonoBehaviour
         SteamVR_Actions.default_GrabPinch.AddOnStateDownListener(TriggerPressed, SteamVR_Input_Sources.Any);
         balloonGameMgr = FindObjectOfType<BalloonGameManager>();
         
+    }
+
+    public void DropGun()
+    {
+        isHoldingGun = false;
     }
 
     private void TriggerPressed(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
@@ -26,11 +34,19 @@ public class GunController : MonoBehaviour
         if (isHoldingGun && balloonGameMgr.isPlayingBalloonGame)
         {
             ShootGun();
-        Debug.Log("Gun has been shot");
         }
     }
 
     public void ShootGun()
     {
+        if (balloonGameMgr.shotsTaken <= balloonGameMgr.totalShotsToTake)
+        {
+            balloonGameMgr.shotsTaken++;
+            Debug.Log("Gun fired!");  
+        }
+        else
+        {
+            Debug.Log("No ammo left!");
+        }
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class BalloonGameManager : MonoBehaviour
 {
+
     public GameObject balloonPrefab;
     public int balloonGameSessionPoints;
     public int balloonGameTotalPoints;
@@ -62,15 +63,20 @@ public class BalloonGameManager : MonoBehaviour
             yield return new WaitForSeconds(balloonSpawnDelayTime);
             int balloonLocation = Random.Range(0, balloonSpawnLocations.Count);
             int balloonMat = Random.Range(0, balloonMaterial.Count);
-            GameObject go = Instantiate(balloonPrefab, balloonSpawnLocations[balloonLocation]);
-            go.GetComponentInChildren<MeshRenderer>().material = balloonMaterial[balloonMat];
-            
+
+            //GameObject go = Instantiate(balloonPrefab, balloonSpawnLocations[balloonLocation]);
+            //go.GetComponentInChildren<MeshRenderer>().material = balloonMaterial[balloonMat];
+
+            Transform newBalloon = ObjectPoolManager.instance.GetObject(ObjectPoolManager.instance.allBalloonsCreated).transform;
+            newBalloon.transform.position = balloonSpawnLocations[balloonLocation].transform.position;
+            newBalloon.GetComponentInChildren<MeshRenderer>().material = balloonMaterial[balloonMat];
+            newBalloon.gameObject.SetActive(true);
         }
     }
 
     public void BalloonGameOver()
     {
-        if(shotsTaken == totalShotsToTake || balloonsPopped == totalBalloonsToSpawn)
+        if(balloonsPopped == totalBalloonsToSpawn)
         {
             isPlayingBalloonGame = false;
         }

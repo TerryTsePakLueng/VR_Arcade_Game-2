@@ -192,6 +192,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef46935a977702f428f523bda97c2a9b, type: 3}
+--- !u!4 &3237639 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7134520829481973178, guid: ef46935a977702f428f523bda97c2a9b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3237638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4607344
 GameObject:
   m_ObjectHideFlags: 0
@@ -3505,6 +3511,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balloonGameMgr: {fileID: 0}
+  gunNozzle: {fileID: 3237639}
+  muzzleFlash: {fileID: 0}
+  balloonPop: {fileID: 0}
   isHoldingGun: 0
 --- !u!1 &540878102
 GameObject:
@@ -4736,6 +4745,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15bbf72d2c830034298a70fd1cf7d953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &766595167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 766595169}
+  - component: {fileID: 766595168}
+  m_Layer: 0
+  m_Name: ObjectPoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &766595168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766595167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c8232ab740f3cc4e9cf88eb10e62999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 0}
+  skeeBallPrefab: {fileID: 1759683503557273394, guid: 523ff65cb06c53f429c2cebe9dc15c69,
+    type: 3}
+  milkCanBallPrefab: {fileID: 1759683503557273394, guid: f5ca6a8cef22a3d4da07fcf11963c4be,
+    type: 3}
+  balloonPrefab: {fileID: 8136224666139831295, guid: cedf5386ab647c34db981a8e3e7bb28a,
+    type: 3}
+  bulletSpawnAmount: 10
+  skeeBallSpawnAmount: 2
+  milkCanBallSpawnAmount: 2
+  balloonSpawnAmount: 5
+  allCreatedbullets: []
+  allSkeeBallsCreated: []
+  allMilkCanBallsCreated: []
+  allBalloonsCreated: []
+--- !u!4 &766595169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766595167}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.476158, y: 0.39387208, z: -4.786831}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &793153571 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0989d878ef2d74c44b4c7ac19551ff67,
@@ -8736,7 +8803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10394,7 +10461,18 @@ MonoBehaviour:
       m_Calls: []
   dropEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 524662130}
+        m_MethodName: DropGun
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   justPickedUpItem: 0
 --- !u!114 &1794677496
 MonoBehaviour:

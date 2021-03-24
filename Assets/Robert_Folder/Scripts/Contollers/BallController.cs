@@ -20,7 +20,8 @@ public class BallController : MonoBehaviour
         yield return new WaitForSeconds(ballDeleteTime);
         if (this.CompareTag("Skeeball_Ball"))
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
             skiBallMgr.RespawnBall();
             skiBallMgr.ballsThrown++;
             hasScored = false;
@@ -33,7 +34,8 @@ public class BallController : MonoBehaviour
         }
         else if (this.CompareTag("MilkCans_Ball"))
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
             milkCansMgr.RespawnBall();
             milkCansMgr.milkCanBallsThrown++;
             hasScored = false;
