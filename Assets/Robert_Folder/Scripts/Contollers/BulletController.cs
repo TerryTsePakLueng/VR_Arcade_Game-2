@@ -35,6 +35,7 @@ public class BulletController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
         gameObject.SetActive(false);
     }
 }

@@ -139,8 +139,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balloonGameMgr: {fileID: 0}
+  balloonMaxSpeed: 3
   balloonSpeed: 1.11
   balloonPoints: 25
+  rb: {fileID: 0}
 --- !u!54 &6780073231315543571
 Rigidbody:
   m_ObjectHideFlags: 0

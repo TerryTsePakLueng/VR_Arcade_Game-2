@@ -35,7 +35,7 @@ public class GunController : MonoBehaviour
         }
         if (isHoldingGun && balloonGameMgr.isPlayingBalloonGame)
         {
-            if (balloonGameMgr.shotsTaken <= balloonGameMgr.totalShotsToTake)
+            if (balloonGameMgr.shotsTaken < balloonGameMgr.totalShotsToTake)
             {
                 Transform newBullet = opm.GetObject(opm.allCreatedbullets).transform;
                 newBullet.transform.position = gunNozzle.transform.position;

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BalloonController : MonoBehaviour
 {
     public BalloonGameManager balloonGameMgr;
+    public float balloonMaxSpeed;
     public float balloonSpeed;
     public int balloonPoints;
     public Rigidbody rb;
@@ -16,11 +17,20 @@ public class BalloonController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         origRot = transform.rotation;
     }
+    private void Start()
+    {
+        GenerateBalloonSpeed();
+    }
 
     private void Update()
     {
         transform.Translate(Vector3.up * balloonSpeed * Time.deltaTime);
         transform.rotation = origRot;
+    }
+    public void GenerateBalloonSpeed()
+    {
+        float newSpeed = Random.Range(1, balloonMaxSpeed);
+        balloonSpeed = newSpeed;
     }
 
     public void BalloonPop()
