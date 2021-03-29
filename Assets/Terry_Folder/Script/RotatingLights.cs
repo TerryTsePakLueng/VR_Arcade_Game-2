@@ -8,19 +8,16 @@ public class RotatingLights : MonoBehaviour
     public float delay = 0.5f;
     public bool isLooping = true;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         StartCoroutine(MakeSpotLightBlink(delay));
     }
 
-    IEnumerator MakeSpotLightBlink(float timeDelay)
+    IEnumerator MakeSpotLightBlink(float delayTime)
     {
-        while(isLooping == true)
-        {
-            spotLight.SetActive(false);
-            yield return new WaitForSeconds(timeDelay);
-            spotLight.SetActive(true);
-        }
+        spotLight.SetActive(false);
+        yield return new WaitForSeconds(delayTime);
+        spotLight.SetActive(true);
     }
+
 }
