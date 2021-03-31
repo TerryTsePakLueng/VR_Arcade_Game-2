@@ -949,7 +949,7 @@ GameObject:
   - component: {fileID: 113746666}
   - component: {fileID: 113746665}
   m_Layer: 0
-  m_Name: MilkCansManager
+  m_Name: '[MILKCANSMANAGER]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4574,7 +4574,7 @@ GameObject:
   - component: {fileID: 766595169}
   - component: {fileID: 766595168}
   m_Layer: 0
-  m_Name: ObjectPoolManager
+  m_Name: '[OBJECTPOOLMANAGER]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7956,7 +7956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8652,7 +8652,7 @@ GameObject:
   - component: {fileID: 1319205537}
   - component: {fileID: 1319205536}
   m_Layer: 0
-  m_Name: BalloonGameManager
+  m_Name: '[BALLOONGAMEMANAGER]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9471,6 +9471,355 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1385141574}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1405154317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1405154318}
+  - component: {fileID: 1405154319}
+  - component: {fileID: 1405154320}
+  m_Layer: 0
+  m_Name: '[AUDIOMANAGER]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1405154318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405154317}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.6071625, y: 1.2262585, z: -0.356654}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1405154319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405154317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54726e76f897c444784745640396d028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxAudioClips:
+  - name: BalloonPop
+    audioClip: {fileID: 8300000, guid: e317b9c6af3d5f74189eab2a10513b35, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: BottleHit1
+    audioClip: {fileID: 8300000, guid: 208bbf8b87ed3e64abc79975839fc9c0, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: BottleHit2
+    audioClip: {fileID: 8300000, guid: 289559a2d4a8e1e4cb3ea131eb541f1a, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: BottleHit3
+    audioClip: {fileID: 8300000, guid: 5f2966fc3bd5ea242928f0367da17143, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: BottleHit4
+    audioClip: {fileID: 8300000, guid: da3398e5489d90b4b8fb691bb8c72a59, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: BottleHit5
+    audioClip: {fileID: 8300000, guid: 6252ad0d082c63b4bb13661c38352b37, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: GameOver
+    audioClip: {fileID: 8300000, guid: 0e8e7d60a04a05247b90dc7d86661d29, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: GameStart
+    audioClip: {fileID: 8300000, guid: e79649d025679d148be1bd1533b0ea7f, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: GunEmpty
+    audioClip: {fileID: 8300000, guid: 379f1037516ec164aacac17318cc7fcc, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: GunShot
+    audioClip: {fileID: 8300000, guid: d61d5613d9f4bf54fbc22558a242df33, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: SkeeballRolling
+    audioClip: {fileID: 8300000, guid: 0acbcbbfc0bbe0f4b8130145dcd0f703, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: SkeeballScore
+    audioClip: {fileID: 8300000, guid: e6ce5ef95a3ecef4d83852f3cec4ce23, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: UIButton
+    audioClip: {fileID: 8300000, guid: f22477bfea1b2d74e9c5646196bed67f, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  backGroundMusic:
+  - name: Music1
+    audioClip: {fileID: 8300000, guid: 11e4a9f1797aeca4fa0354de459114c7, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Music2
+    audioClip: {fileID: 8300000, guid: 726142f1fc8369349905010c6ec191f8, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Music3
+    audioClip: {fileID: 8300000, guid: 9ff99ffc5f6c9b44c840376ef74db7ce, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Music4
+    audioClip: {fileID: 8300000, guid: d88cd6acccfe57946a7e711d5535cb4a, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Music5
+    audioClip: {fileID: 8300000, guid: 5472e583ab3e68b408b4b4c89db93646, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Music6
+    audioClip: {fileID: 8300000, guid: 85b5580e826620e44b63a7e69760d2da, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Music7
+    audioClip: {fileID: 8300000, guid: c701477d48431bf469c8a6477e163a8a, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Music8
+    audioClip: {fileID: 8300000, guid: ef37aabcc20698243b7f9915a88af29c, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Music9
+    audioClip: {fileID: 8300000, guid: 11bdd097c2a310f479f10f0d08e0b6a9, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Music10
+    audioClip: {fileID: 8300000, guid: bf5eeb310b8bc09439f7131422d17426, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Music11
+    audioClip: {fileID: 8300000, guid: 7ccadfc362f8812449aced7c3770c0ab, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Music12
+    audioClip: {fileID: 8300000, guid: a8a9d6e6df543114185ba7a4db6f8a54, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Music13
+    audioClip: {fileID: 8300000, guid: 7b95c938d11f8d44cb31e3071c3cfb80, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Ad1
+    audioClip: {fileID: 8300000, guid: 8ae7ea1909277e2449c85341ad394965, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Ad2
+    audioClip: {fileID: 8300000, guid: ce6d26e6ef5d5fd42a1f1172b4643131, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Ad3
+    audioClip: {fileID: 8300000, guid: 2d58c6f529ab277499397239fdbdb749, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Ad4
+    audioClip: {fileID: 8300000, guid: f5d83e2d5355632449ecc70c8510c11f, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Ad5
+    audioClip: {fileID: 8300000, guid: f9c5c64e3b1abcf4cb115d30dff8a1e8, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Ad6
+    audioClip: {fileID: 8300000, guid: e2e1acfa73a5dd34e9ac9158c6a962db, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Ad7
+    audioClip: {fileID: 8300000, guid: 80d33785ccaf6f94ca7682983b203399, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Ad8
+    audioClip: {fileID: 8300000, guid: 395d80dc94c317246afc913d7e082228, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    audioSource: {fileID: 0}
+  backGroundNoise: {fileID: 1405154320}
+  radio: {fileID: 843977411}
+--- !u!82 &1405154320
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405154317}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ec12f7772c03e4c4c9e4c2f1643595ad,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.08
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1411016767
 GameObject:
   m_ObjectHideFlags: 0
@@ -13508,7 +13857,7 @@ GameObject:
   - component: {fileID: 1908948323}
   - component: {fileID: 1908948322}
   m_Layer: 0
-  m_Name: SkeeballManager
+  m_Name: '[SKEEBALLMANAGER]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

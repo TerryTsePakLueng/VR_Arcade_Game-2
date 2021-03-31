@@ -2,18 +2,69 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using System;
 
 public class AudioManager : MonoBehaviour
 {
-    // SFX
-    public AudioClip gunShotSound;
-    public AudioClip emptyGunFireSound;
-    public AudioClip balloonPopSound;
-    public AudioClip startGameSound;
-    public AudioClip miniGameOverSound;
+    public static AudioManager instance;
 
-    // Music
+    public List<Audio> sfxAudioClips = new List<Audio>();
+    public List<Audio> backGroundMusic = new List<Audio>();
 
+    public AudioSource backGroundNoise;
+    public GameObject radio;
+    private void Awake()
+    {
+        if(instance != null && instance != this)
+        {
+            instance = this;
+        }
+    }
 
+    private void Start()
+    {
+        foreach(Audio audio in backGroundMusic)
+        {
+            SetAudioPeramaters(audio, radio);
+        }
 
+        foreach(Audio audio in sfxAudioClips)
+        {
+            SetAudioPeramaters(audio, gameObject);
+        }
+
+        backGroundNoise.Play();
+    }
+
+    public void SetAudioPeramaters(Audio audio, GameObject audioLocation)
+    {
+        audio.audioSource = audioLocation.AddComponent<AudioSource>();
+        audio.audioSource.clip = audio.audioClip;
+        audio.audioSource.pitch = audio.pitch;
+        audio.audioSource.volume = audio.volume;
+    }
+
+    public void PlayAudio(string name)
+    {
+        Audio a = sfxAudioClips.Find(x => x.name == name);
+    
+        if(a == null)
+        {
+            Debug.Log("<color=red>Incorrect audio name!</color>");
+            return;
+        }
+        a.audioSource.Play();
+    }
+
+    public void StopAudio(string name)
+    {
+        Audio a = sfxAudioClips.Find(x => x.name == name);
+
+        if (a == null)
+        {
+            Debug.Log("<color=red>Incorrect audio name!</color>");
+            return;
+        }
+        a.audioSource.Stop();
+    }
 }
