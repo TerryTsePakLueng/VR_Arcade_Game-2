@@ -37,11 +37,21 @@ public class GunController : MonoBehaviour
         {
             if (balloonGameMgr.shotsTaken < balloonGameMgr.totalShotsToTake)
             {
-                Transform newBullet = opm.GetObject(opm.allCreatedbullets).transform;
-                newBullet.transform.position = gunNozzle.transform.position;
-                newBullet.gameObject.SetActive(true);
-                balloonGameMgr.shotsTaken++;
-                Debug.Log("Gun fired!");
+                if (gunNozzle != null)
+                {
+                    Transform newBullet = opm.GetObject(opm.allCreatedbullets).transform;
+                    newBullet.transform.position = gunNozzle.transform.position;
+                    newBullet.transform.rotation = gunNozzle.transform.rotation;
+                    newBullet.gameObject.SetActive(true);
+                    balloonGameMgr.shotsTaken++;
+                    balloonGameMgr.shotsLeftToTake = balloonGameMgr.totalShotsToTake - balloonGameMgr.shotsTaken;
+                    balloonGameMgr.balloonGameShotsLeftText.text = balloonGameMgr.shotsLeftToTake.ToString();
+                    Debug.Log("Gun fired!");
+                }
+                else
+                {
+                    Debug.Log("No reference to the gun nozzle!");
+                }
             }
             else
             {

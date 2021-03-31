@@ -40,6 +40,7 @@ public class BalloonGameManager : MonoBehaviour
             balloonsPopped = 0;
             balloonGameSessionPointsText.text = balloonGameSessionPoints.ToString();
             shotsTaken = 0;
+            shotsLeftToTake = totalShotsToTake - shotsTaken;
             balloonGameShotsLeftText.text = shotsLeftToTake.ToString();
             StartCoroutine(SpawnNewBalloons());
         }
@@ -54,8 +55,6 @@ public class BalloonGameManager : MonoBehaviour
         balloonGameTotalPoints += points;
         balloonGameSessionPoints += points;
         balloonGameSessionPointsText.text = balloonGameSessionPoints.ToString();
-        shotsLeftToTake = totalShotsToTake - shotsTaken;
-        balloonGameShotsLeftText.text = shotsLeftToTake.ToString();
     }
 
     public IEnumerator SpawnNewBalloons()

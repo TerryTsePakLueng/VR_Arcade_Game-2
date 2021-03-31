@@ -46,9 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad14acb2222c8048ac817588e3c3c77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  gc: {fileID: 0}
-  bulletSpeed: 40
+  rb: {fileID: 7031175778081471339}
+  gc: {fileID: 1211884515067909575, guid: bfdedf5b0ca424b41bf96e0dd58a90f1, type: 3}
+  bulletSpeed: 30
 --- !u!135 &7523940091140602798
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -60,7 +60,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.008
+  m_Radius: 0.02
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &7031175778081471339
 Rigidbody:
