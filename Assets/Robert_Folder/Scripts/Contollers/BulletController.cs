@@ -8,11 +8,9 @@ public class BulletController : MonoBehaviour
     public GunController gc;
     public int bulletSpeed;
 
-    private void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        gc = FindObjectOfType<GunController>();
-        transform.SetParent(null);
         StartCoroutine(DeleteBullet());
     }
     private void Update()
@@ -22,7 +20,7 @@ public class BulletController : MonoBehaviour
 
     public void BulletTravel()
     {
-        transform.Translate(gc.gunNozzle.forward * bulletSpeed * Time.deltaTime);
+        transform.Translate(gc.gunNozzle.transform.right * bulletSpeed * Time.deltaTime, Space.Self);
     }
     public IEnumerator DeleteBullet()
     {
