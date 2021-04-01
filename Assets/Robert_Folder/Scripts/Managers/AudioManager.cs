@@ -26,6 +26,7 @@ public class AudioManager : MonoBehaviour
         foreach(Audio audio in backGroundMusic)
         {
             SetAudioPeramaters(audio, radio);
+            audio.audioSource.maxDistance = 10;
         }
 
         foreach(Audio audio in sfxAudioClips)
@@ -34,6 +35,7 @@ public class AudioManager : MonoBehaviour
         }
 
         backGroundNoise.Play();
+        PlayRadio();
     }
 
     public void SetAudioPeramaters(Audio audio, GameObject audioLocation)
@@ -66,5 +68,13 @@ public class AudioManager : MonoBehaviour
             return;
         }
         a.audioSource.Stop();
+    }
+
+    public void PlayRadio()
+    {
+        for(int i = 0; i < backGroundMusic.Count; i++)
+        {
+            backGroundMusic[i].audioSource.Play();
+        }
     }
 }
