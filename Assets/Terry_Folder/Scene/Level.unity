@@ -100,7 +100,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 19e40b0274650ef44b1023aa8802724d,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -12328,7 +12328,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1259876340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.787, y: -0.939, z: -1.6471}
+  m_LocalPosition: {x: 2.787, y: -0.939, z: -1.72}
   m_LocalScale: {x: 10.025945, y: 0.12212239, z: 6.9583225}
   m_Children: []
   m_Father: {fileID: 1262994901}
@@ -12365,7 +12365,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8bc715d216b709649bfd11485d44dce7, type: 2}
+  - {fileID: 2100000, guid: c7738e1e7657bbe4d8312419375fc966, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
