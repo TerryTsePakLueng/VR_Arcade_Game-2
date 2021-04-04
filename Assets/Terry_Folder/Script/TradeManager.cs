@@ -64,7 +64,7 @@ public class TradeManager : MonoBehaviour
 
     public void OnTradingButtonPress()
     {
-        if(totalScoreForAllGames >= 50)
+        if (totalScoreForAllGames >= 50)
         {
             int temp = totalScoreForAllGames;
             totalCyberShards = Mathf.RoundToInt(totalScoreForAllGames / 50);
