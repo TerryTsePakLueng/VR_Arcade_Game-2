@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: be72ab93e69fa6a4f8ac534dd0627952
+guid: c2332b9a06d1bf045a5c921b8d4a5f2e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7470217015063282736
-    second: fire2_0
+      213: -2757008047180432429
+    second: candy_0
   - first:
-      213: 8445186504645142777
-    second: fire2_1
+      213: -4176791522101867698
+    second: candy_1
   - first:
-      213: 540689667861790925
-    second: fire2_2
+      213: 8360600491148674336
+    second: candy_2
   - first:
-      213: 4794835333742939833
-    second: fire2_3
+      213: 6008785056096282273
+    second: candy_3
+  - first:
+      213: 7741379879096863979
+    second: candy_4
+  - first:
+      213: -3464503351013630185
+    second: candy_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -135,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fire2_0
+      name: candy_0
       rect:
         serializedVersion: 2
-        x: 254
-        y: 275
-        width: 105
-        height: 207
+        x: 953
+        y: 779
+        width: 26
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0340de9dbca8ba760800000000000000
-      internalID: 7470217015063282736
+      spriteID: 3dbbae0d9c32db9d0800000000000000
+      internalID: -2757008047180432429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fire2_1
+      name: candy_1
       rect:
         serializedVersion: 2
-        x: 376
-        y: 115
-        width: 126
-        height: 215
+        x: 460
+        y: 716
+        width: 31
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f8eb47a164533570800000000000000
-      internalID: 8445186504645142777
+      spriteID: e4b41408d3e0906c0800000000000000
+      internalID: -4176791522101867698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fire2_2
+      name: candy_2
       rect:
         serializedVersion: 2
-        x: 25
-        y: 3
-        width: 119
-        height: 220
+        x: 527
+        y: 712
+        width: 25
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,20 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc040a2636ae08700800000000000000
-      internalID: 540689667861790925
+      spriteID: 0258fdfa9d1d60470800000000000000
+      internalID: 8360600491148674336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fire2_3
+      name: candy_3
       rect:
         serializedVersion: 2
-        x: 232
-        y: 0
-        width: 135
-        height: 235
+        x: 425
+        y: 672
+        width: 25
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,8 +218,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9be4d38f45daa8240800000000000000
-      internalID: 4794835333742939833
+      spriteID: 1a66b403c2e736350800000000000000
+      internalID: 6008785056096282273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_4
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 615
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beccce40cf7ee6b60800000000000000
+      internalID: 7741379879096863979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_5
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 305
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f9ea7de8c9befc0800000000000000
+      internalID: -3464503351013630185
       vertices: []
       indices: 
       edges: []
@@ -221,7 +269,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 212bd7d8fd2bba54dbd138c2d337c0ba
     internalID: 0
     vertices: []
     indices: 
