@@ -3349,7 +3349,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 1032.9653, y: 193.681}
   savedColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  savedTextUV0: {x: 0.29882812, y: 0.37890625}
+  savedTextUV0: {x: 0.03125, y: 0.4765625}
   savedFill: 0
 --- !u!114 &1425634753
 MonoBehaviour:
@@ -3444,7 +3444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.054832935, b: 1, a: 0.39215687}
+  m_Color: {r: 0, g: 0.83137256, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3506,6 +3506,8 @@ MonoBehaviour:
   watchMyTicketsCanvas: {fileID: 1309661705}
   watchMyScoreCanvas: {fileID: 569103737}
   isOpen: 0
+  cyberShardTotal: {fileID: 1845006341}
+  totalScore: {fileID: 1493956022}
 --- !u!4 &1527731939
 Transform:
   m_ObjectHideFlags: 0
@@ -4197,7 +4199,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 3130.146, y: 497.7893}
   savedColor: {r: 0.87121236, g: 1, b: 0, a: 1}
-  savedTextUV0: {x: 0.3515625, y: 0.34277344}
+  savedTextUV0: {x: 0.703125, y: 0.34277344}
   savedFill: 0
 --- !u!114 &2093317850
 MonoBehaviour:

@@ -13,8 +13,19 @@ public class WatchManager : MonoBehaviour
 
     public bool isOpen = false;
 
+    public Text cyberShardTotal;
+    public Text totalScore;
+
+    TradeManager tradeMgr;
+
+    private void Awake()
+    {
+        tradeMgr = FindObjectOfType<TradeManager>();
+    }
+
     public void Start()
     {
+        FillTextFieldsInWatch();
         DontDestroyOnLoad(gameObject);
     }
 
@@ -24,6 +35,7 @@ public class WatchManager : MonoBehaviour
         {
             watchMyTicketsCanvas.SetActive(false);
             watchMainMenuCanvas.SetActive(true);
+            FillTextFieldsInWatch();
             watchAnimator.SetBool("isOpen", true);
             isOpen = true;
         }
@@ -32,6 +44,13 @@ public class WatchManager : MonoBehaviour
             watchAnimator.SetBool("isOpen", false);
             isOpen = false;
         }
+    }
+
+    public void FillTextFieldsInWatch()
+    {
+        cyberShardTotal.text = tradeMgr.totalCyberShards.ToString();
+        tradeMgr.CalculateTotal();
+        totalScore.text = tradeMgr.totalScoreForAllGames.ToString();
     }
 
     public void OnMyTicketsButtonPress()
