@@ -10187,19 +10187,19 @@ MonoBehaviour:
   - itemName: Pie-NO-apple Pizza
     itemDescription: 'This Pizza isn''t a pizza. It is a pie filled with nothing
       other than dough. '
-    itemImage: {fileID: 0}
+    itemImage: {fileID: 21300000, guid: 08aee9d4ab9c65f44a86135f443a43e1, type: 3}
     itemCost: 10
     itemPrefab: {fileID: 0}
-  - itemName: 
-    itemDescription: 
-    itemImage: {fileID: 0}
+  - itemName: Air
+    itemDescription: Mix of gases.
+    itemImage: {fileID: 21300000, guid: ceea5e44446f46f429d8e0db16812249, type: 3}
     itemCost: 0
     itemPrefab: {fileID: 0}
   - itemName: Dodge Challenger SRT
     itemDescription: This car is the ULTIMATE flex! You won't be able to drive it
       but being able to lift it and throw it shows how addicted, bored and supportive
       you are about our game. You have reached Chad level!
-    itemImage: {fileID: 0}
+    itemImage: {fileID: 21300000, guid: 998ce1daf7732c94580fdf14cc46255d, type: 3}
     itemCost: 300
     itemPrefab: {fileID: 0}
   itemNameTXT: {fileID: 2094147248}

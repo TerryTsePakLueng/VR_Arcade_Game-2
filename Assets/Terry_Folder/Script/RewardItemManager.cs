@@ -59,12 +59,16 @@ public class RewardItemManager : MonoBehaviour
 
     public void OnTradePressed()
     {
-        if (tradeMgr.totalScoreForAllGames >= rewardItems[currentItemIndex].itemCost)
+        if (tradeMgr.totalCyberShards >= rewardItems[currentItemIndex].itemCost)
         {
-            tradeMgr.totalScoreForAllGames -= rewardItems[currentItemIndex].itemCost;
+            tradeMgr.totalCyberShards -= rewardItems[currentItemIndex].itemCost;
             if (rewardItems[currentItemIndex].itemPrefab != null)
             {
                 Instantiate(rewardItems[currentItemIndex].itemPrefab, itemSpawnPoint);
+            }
+            else
+            {
+                Debug.Log("No Physical Item For That Item!");
             }
         }
     }
