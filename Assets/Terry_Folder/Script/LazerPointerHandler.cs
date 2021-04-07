@@ -31,9 +31,9 @@ public class LazerPointerHandler : MonoBehaviour
             e.target.GetComponent<Button>().onClick.Invoke(); //invoke the button we just clicked
     }
 
-    private void OnDisable()
-    {
-        laserPtrRef.PointerClick -= PointerClickCallback;
-        laserPtrRef.active = false;
-    }
+    //private void OnDisable()
+    //{
+    //    laserPtrRef.PointerClick -= PointerClickCallback;
+    //    laserPtrRef.active = false;
+    //}
 }

@@ -69,9 +69,10 @@ public class TradeManager : MonoBehaviour
         if (totalScoreForAllGames >= 50)
         {
             int temp = totalScoreForAllGames;
-            totalCyberShards += Mathf.RoundToInt(totalScoreForAllGames / 50);
-            cyberShardsEverOwned += totalCyberShards;
-            totalScoreForAllGames = temp - (totalCyberShards * 50);
+            int tempCyberShards = Mathf.RoundToInt(totalScoreForAllGames / 50);
+            totalCyberShards += tempCyberShards;
+            cyberShardsEverOwned += tempCyberShards;
+            totalScoreForAllGames = temp - (tempCyberShards * 50);
             totalCyberShardsTXT.text = totalCyberShards.ToString();
             totalScoreTXT.text = totalScoreForAllGames.ToString();
         }

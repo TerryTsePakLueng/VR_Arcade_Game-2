@@ -3357,7 +3357,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 1032.9653, y: 193.681}
   savedColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  savedTextUV0: {x: 0.29882812, y: 0.37890625}
+  savedTextUV0: {x: 0.29882812, y: 0.18945312}
   savedFill: 0
 --- !u!114 &1425634753
 MonoBehaviour:
