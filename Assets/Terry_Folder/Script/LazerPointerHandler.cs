@@ -13,7 +13,7 @@ public class LazerPointerHandler : MonoBehaviour
     private SteamVR_LaserPointer laserPtrRef;
     //private List<SteamVR_LaserPointer> laserPtrRefs;
 
-    private void Awake()
+    private void OnEnable()
     {
         laserPtrRef = FindObjectOfType<SteamVR_LaserPointer>();
         laserPtrRef.PointerClick += PointerClickCallback;
@@ -29,5 +29,11 @@ public class LazerPointerHandler : MonoBehaviour
     {
         if (e.target.GetComponent<Button>() != null)
             e.target.GetComponent<Button>().onClick.Invoke(); //invoke the button we just clicked
+    }
+
+    private void OnDisable()
+    {
+        laserPtrRef.PointerClick -= PointerClickCallback;
+        laserPtrRef.active = false;
     }
 }

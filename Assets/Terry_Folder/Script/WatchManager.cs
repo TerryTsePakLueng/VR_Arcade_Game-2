@@ -48,7 +48,8 @@ public class WatchManager : MonoBehaviour
 
     public void FillTextFieldsInWatch()
     {
-        if(tradeMgr != null)
+        tradeMgr = FindObjectOfType<TradeManager>();
+        if (tradeMgr != null)
         {
             cyberShardTotal.text = tradeMgr.totalCyberShards.ToString();
             tradeMgr.CalculateTotal();
