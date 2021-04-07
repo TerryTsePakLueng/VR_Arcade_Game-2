@@ -11,19 +11,16 @@ public class HandScannerTriggerArea : MonoBehaviour
         tradeMgr = FindObjectOfType<TradeManager>();
     }
 
-    private void OnTriggerExit(Collider other)
+    public void OnButtonPress()
     {
-        if(other.gameObject.CompareTag("Player"))
+        if (!tradeMgr.scrollingAnimator.GetBool("isScrolled"))
         {
-            if(tradeMgr.scrollingAnimator.GetBool("isScrolled") == false)
-            {
-                tradeMgr.UpdateTotalPoints();
-                tradeMgr.ScrollDownTradingDisplay();
-            }
-            else if(tradeMgr.scrollingAnimator.GetBool("isScrolled") == true)
-            {
-                tradeMgr.ScrollUpTradingDisplay();
-            }
+            tradeMgr.ScrollDownTradingDisplay();
+            tradeMgr.UpdateTotalPoints();
+        }
+        else if (tradeMgr.scrollingAnimator.GetBool("isScrolled"))
+        {
+            tradeMgr.ScrollUpTradingDisplay();
         }
     }
 }

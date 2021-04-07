@@ -2957,6 +2957,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 165334, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3004,6 +3008,10 @@ PrefabInstance:
     - target: {fileID: 11464692, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013428287994, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 114000013786455312, guid: dc06161b6d97feb419f45f03b62e14b9,
         type: 3}
@@ -3349,7 +3357,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 1032.9653, y: 193.681}
   savedColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  savedTextUV0: {x: 0.03125, y: 0.4765625}
+  savedTextUV0: {x: 0.29882812, y: 0.37890625}
   savedFill: 0
 --- !u!114 &1425634753
 MonoBehaviour:
@@ -4199,7 +4207,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 3130.146, y: 497.7893}
   savedColor: {r: 0.87121236, g: 1, b: 0, a: 1}
-  savedTextUV0: {x: 0.703125, y: 0.34277344}
+  savedTextUV0: {x: 0.3515625, y: 0.34277344}
   savedFill: 0
 --- !u!114 &2093317850
 MonoBehaviour:
@@ -4514,6 +4522,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1344017779}
     m_Modifications:
+    - target: {fileID: 4635855051182664589, guid: adda773ba6efdaf4092d47cca7eb7dfb,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4849163841045940485, guid: adda773ba6efdaf4092d47cca7eb7dfb,
         type: 3}
       propertyPath: m_RootOrder
@@ -4579,6 +4592,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Watch_FBX
       objectReference: {fileID: 0}
+    - target: {fileID: 5188252868528182207, guid: adda773ba6efdaf4092d47cca7eb7dfb,
+        type: 3}
+      propertyPath: m_TagString
+      value: Watch
+      objectReference: {fileID: 0}
+    - target: {fileID: 5412760910670117847, guid: adda773ba6efdaf4092d47cca7eb7dfb,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7718354753016608605, guid: adda773ba6efdaf4092d47cca7eb7dfb,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -4613,6 +4636,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774703101940545658, guid: adda773ba6efdaf4092d47cca7eb7dfb,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8292551464472000240, guid: adda773ba6efdaf4092d47cca7eb7dfb,
         type: 3}

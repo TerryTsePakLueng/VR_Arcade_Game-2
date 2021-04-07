@@ -13,8 +13,10 @@ public class TradeManager : MonoBehaviour
 
     public GameObject mainTradingMenu;
     public GameObject rewardsMenu;
+    public GameObject scrollingDisplay;
 
     public int totalCyberShards = 0;
+    private int cyberShardsEverOwned = 0;
     public int totalScoreForAllGames = 0;
 
     public Text totalCyberShardsTXT;
@@ -25,7 +27,7 @@ public class TradeManager : MonoBehaviour
 
     private void Awake()
     {
-        scrollingAnimator = GetComponent<Animator>();
+        scrollingAnimator = scrollingDisplay.GetComponent<Animator>();
         skeeballMgr = FindObjectOfType<SkeeballManager>();
         milkCanMgr = FindObjectOfType<MilkCansManager>();
         balloonGameMgr = FindObjectOfType<BalloonGameManager>();
@@ -48,8 +50,8 @@ public class TradeManager : MonoBehaviour
 
     public void CalculateTotal()
     {
-        totalScoreForAllGames = (skeeballMgr.skeeBallTotalPoints + 
-            milkCanMgr.milkcansTotalPoints + balloonGameMgr.balloonGameTotalPoints);
+        totalScoreForAllGames = ((skeeballMgr.skeeBallTotalPoints + 
+            milkCanMgr.milkcansTotalPoints + balloonGameMgr.balloonGameTotalPoints) - (cyberShardsEverOwned * 50));
     }
 
     public void ScrollDownTradingDisplay()
@@ -67,7 +69,8 @@ public class TradeManager : MonoBehaviour
         if (totalScoreForAllGames >= 50)
         {
             int temp = totalScoreForAllGames;
-            totalCyberShards = Mathf.RoundToInt(totalScoreForAllGames / 50);
+            totalCyberShards += Mathf.RoundToInt(totalScoreForAllGames / 50);
+            cyberShardsEverOwned += totalCyberShards;
             totalScoreForAllGames = temp - (totalCyberShards * 50);
             totalCyberShardsTXT.text = totalCyberShards.ToString();
             totalScoreTXT.text = totalScoreForAllGames.ToString();

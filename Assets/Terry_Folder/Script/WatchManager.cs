@@ -48,9 +48,17 @@ public class WatchManager : MonoBehaviour
 
     public void FillTextFieldsInWatch()
     {
-        cyberShardTotal.text = tradeMgr.totalCyberShards.ToString();
-        tradeMgr.CalculateTotal();
-        totalScore.text = tradeMgr.totalScoreForAllGames.ToString();
+        if(tradeMgr != null)
+        {
+            cyberShardTotal.text = tradeMgr.totalCyberShards.ToString();
+            tradeMgr.CalculateTotal();
+            totalScore.text = tradeMgr.totalScoreForAllGames.ToString();
+        }
+        else
+        {
+            cyberShardTotal.text = "No Data Found";
+            totalScore.text = "No Data Found";
+        }
     }
 
     public void OnMyTicketsButtonPress()
