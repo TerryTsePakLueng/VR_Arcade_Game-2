@@ -7,6 +7,7 @@ public class GunController : MonoBehaviour
 {
     public ObjectPoolManager opm;
     public BalloonGameManager balloonGameMgr;
+    public AudioManager audioManager;
 
     public Transform gunNozzle;
     public ParticleSystem muzzleFlash;
@@ -17,6 +18,7 @@ public class GunController : MonoBehaviour
     {
         SteamVR_Actions.default_GrabPinch.AddOnStateDownListener(TriggerPressed, SteamVR_Input_Sources.Any);
         balloonGameMgr = FindObjectOfType<BalloonGameManager>();
+        audioManager = FindObjectOfType<AudioManager>();
         opm = FindObjectOfType<ObjectPoolManager>();
         
     }
@@ -39,6 +41,7 @@ public class GunController : MonoBehaviour
             {
                 if (gunNozzle != null)
                 {
+                    audioManager.PlayAudio("GunShot");
                     Transform newBullet = opm.GetObject(opm.allCreatedbullets).transform;
                     newBullet.transform.position = gunNozzle.transform.position;
                     newBullet.transform.rotation = gunNozzle.transform.rotation;
@@ -55,6 +58,7 @@ public class GunController : MonoBehaviour
             }
             else
             {
+                audioManager.PlayAudio("GunEmpty");
                 Debug.Log("No ammo left!");
             }
         }

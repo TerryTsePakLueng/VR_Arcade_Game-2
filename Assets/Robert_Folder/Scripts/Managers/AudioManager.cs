@@ -8,8 +8,8 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
 
-    public List<Audio> sfxAudioClips = new List<Audio>();
-    public List<Audio> backGroundMusic = new List<Audio>();
+    public Audio[] sfxAudioClips;
+    public Audio[] backGroundMusic;
 
     public AudioSource backGroundNoise;
     public GameObject radio;
@@ -26,7 +26,8 @@ public class AudioManager : MonoBehaviour
         foreach(Audio audio in backGroundMusic)
         {
             SetAudioPeramaters(audio, radio);
-            audio.audioSource.maxDistance = 10;
+            audio.audioSource.spatialBlend = 0.8f;
+            audio.audioSource.maxDistance = 50;
         }
 
         foreach(Audio audio in sfxAudioClips)
@@ -44,23 +45,25 @@ public class AudioManager : MonoBehaviour
         audio.audioSource.clip = audio.audioClip;
         audio.audioSource.pitch = audio.pitch;
         audio.audioSource.volume = audio.volume;
+        audio.audioSource.playOnAwake = false;
     }
 
     public void PlayAudio(string name)
     {
-        Audio a = sfxAudioClips.Find(x => x.name == name);
+        Audio a = Array.Find(sfxAudioClips, audio => audio.name == name);
     
         if(a == null)
         {
             Debug.Log("<color=red>Incorrect audio name!</color>");
             return;
         }
+        Debug.Log("Sound " + a.name);
         a.audioSource.Play();
     }
 
     public void StopAudio(string name)
     {
-        Audio a = sfxAudioClips.Find(x => x.name == name);
+        Audio a = Array.Find(sfxAudioClips, audio => audio.name == name);
 
         if (a == null)
         {
@@ -72,9 +75,6 @@ public class AudioManager : MonoBehaviour
 
     public void PlayRadio()
     {
-        for(int i = 0; i < backGroundMusic.Count; i++)
-        {
-            backGroundMusic[i].audioSource.Play();
-        }
+
     }
 }

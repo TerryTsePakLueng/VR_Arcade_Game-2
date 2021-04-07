@@ -100,7 +100,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 19e40b0274650ef44b1023aa8802724d,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -733,6 +733,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33869683}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &39938133
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.6603374
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.0127622e-18
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.291582
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
 --- !u!1 &43844754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,7 +1388,7 @@ Transform:
   - {fileID: 4000012696732425}
   - {fileID: 688472213}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &115091073 stripped
 GameObject:
@@ -3569,7 +3626,7 @@ Transform:
   - {fileID: 843977412}
   - {fileID: 1966094555}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &424776744
 GameObject:
@@ -3757,7 +3814,7 @@ Transform:
   m_Children:
   - {fileID: 1417543163}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &443368251
 GameObject:
@@ -4999,7 +5056,7 @@ Transform:
   - {fileID: 1319929387}
   - {fileID: 1861639070}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &633223365
 GameObject:
@@ -6564,7 +6621,7 @@ Transform:
   - {fileID: 1792582220}
   - {fileID: 2062372486}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &730776350
 GameObject:
@@ -7223,7 +7280,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &767282353
 GameObject:
@@ -7493,7 +7550,7 @@ Transform:
   - {fileID: 1566476204}
   - {fileID: 43844755}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &821348978
 GameObject:
@@ -10163,7 +10220,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1114059310
 GameObject:
@@ -12889,7 +12946,7 @@ Transform:
   - {fileID: 752085357}
   - {fileID: 524662129}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1319329287
 GameObject:
@@ -13664,7 +13721,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1405154319
 MonoBehaviour:
@@ -13681,38 +13738,38 @@ MonoBehaviour:
   sfxAudioClips:
   - name: BalloonPop
     audioClip: {fileID: 8300000, guid: e317b9c6af3d5f74189eab2a10513b35, type: 3}
-    volume: 0.5
-    pitch: 0
+    volume: 0.2
+    pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: BottleHit1
     audioClip: {fileID: 8300000, guid: 208bbf8b87ed3e64abc79975839fc9c0, type: 3}
     volume: 0.5
-    pitch: 0
+    pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: BottleHit2
     audioClip: {fileID: 8300000, guid: 289559a2d4a8e1e4cb3ea131eb541f1a, type: 3}
     volume: 0.5
-    pitch: 0
+    pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: BottleHit3
     audioClip: {fileID: 8300000, guid: 5f2966fc3bd5ea242928f0367da17143, type: 3}
     volume: 0.5
-    pitch: 0
+    pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: BottleHit4
     audioClip: {fileID: 8300000, guid: da3398e5489d90b4b8fb691bb8c72a59, type: 3}
     volume: 0.5
-    pitch: 0
+    pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: BottleHit5
     audioClip: {fileID: 8300000, guid: 6252ad0d082c63b4bb13661c38352b37, type: 3}
     volume: 0.5
-    pitch: 0
+    pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: GameOver
@@ -13724,37 +13781,37 @@ MonoBehaviour:
   - name: GameStart
     audioClip: {fileID: 8300000, guid: e79649d025679d148be1bd1533b0ea7f, type: 3}
     volume: 0.5
-    pitch: 0
+    pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: GunEmpty
     audioClip: {fileID: 8300000, guid: 379f1037516ec164aacac17318cc7fcc, type: 3}
     volume: 0.5
-    pitch: 0
+    pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: GunShot
     audioClip: {fileID: 8300000, guid: d61d5613d9f4bf54fbc22558a242df33, type: 3}
     volume: 0.5
-    pitch: 0
+    pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: SkeeballRolling
     audioClip: {fileID: 8300000, guid: 0acbcbbfc0bbe0f4b8130145dcd0f703, type: 3}
     volume: 0.5
-    pitch: 0
+    pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: SkeeballScore
     audioClip: {fileID: 8300000, guid: e6ce5ef95a3ecef4d83852f3cec4ce23, type: 3}
     volume: 0.5
-    pitch: 0
+    pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: UIButton
     audioClip: {fileID: 8300000, guid: f22477bfea1b2d74e9c5646196bed67f, type: 3}
     volume: 0.5
-    pitch: 0
+    pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   backGroundMusic:
@@ -13895,11 +13952,10 @@ AudioSource:
   m_GameObject: {fileID: 1405154317}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: ec12f7772c03e4c4c9e4c2f1643595ad,
-    type: 2}
-  m_audioClip: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ae86cbb93307b1b4eb062679896abb51, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.08
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -17605,7 +17661,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1741119146
 GameObject:
@@ -19753,7 +19809,7 @@ Transform:
   - {fileID: 7966164918855111340}
   - {fileID: 4000013983499950}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1909103956
 GameObject:
@@ -20127,7 +20183,7 @@ Transform:
   - {fileID: 207139678}
   - {fileID: 650586869}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1948572898
 GameObject:
@@ -22977,7 +23033,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 353473820, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 0
+      value: -6.5650314e-27
       objectReference: {fileID: 0}
     - target: {fileID: 353473820, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
       propertyPath: m_BoundingSphereOverride.x
@@ -22985,31 +23041,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 353473820, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 2.1821e-41
+      value: -1.3537174e-20
       objectReference: {fileID: 0}
     - target: {fileID: 353473820, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 0
+      value: 109923.94
       objectReference: {fileID: 0}
     - target: {fileID: 399661047, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 7e-45
+      value: 1.056346e+20
       objectReference: {fileID: 0}
     - target: {fileID: 399661047, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 8
+      value: 4.5905e-41
       objectReference: {fileID: 0}
     - target: {fileID: 399661047, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 0
+      value: 2.2174383e-17
       objectReference: {fileID: 0}
     - target: {fileID: 399661047, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 0
+      value: 8.98e-43
       objectReference: {fileID: 0}
     - target: {fileID: 802582456, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 0
+      value: -4.860677e-11
       objectReference: {fileID: 0}
     - target: {fileID: 802582456, guid: d3a558994adeb0f40844f4508c4bb4f1, type: 3}
       propertyPath: m_BoundingSphereOverride.x

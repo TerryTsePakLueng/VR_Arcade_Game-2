@@ -5,6 +5,8 @@ using UnityEngine;
 public class BalloonController : MonoBehaviour
 {
     public BalloonGameManager balloonGameMgr;
+    public AudioManager audioMgr;
+
     public float balloonMaxSpeed;
     public float balloonSpeed;
     public int balloonPoints;
@@ -14,6 +16,7 @@ public class BalloonController : MonoBehaviour
     private void Awake()
     {
         balloonGameMgr = FindObjectOfType<BalloonGameManager>();
+        audioMgr = FindObjectOfType<AudioManager>();
         rb = GetComponent<Rigidbody>();
         origRot = transform.rotation;
     }
@@ -39,6 +42,7 @@ public class BalloonController : MonoBehaviour
         balloonGameMgr.BalloonGameOver();
         rb.velocity = Vector3.zero;
         gameObject.SetActive(false);
+        audioMgr.PlayAudio("BalloonPop");
     }
     private void OnCollisionEnter(Collision collision)
     {

@@ -6,6 +6,7 @@ public class BallController : MonoBehaviour
 {
     public SkeeballManager skiBallMgr;
     public MilkCansManager milkCansMgr;
+    public AudioManager audioMgr;
 
     public float ballDeleteTime;
     public bool hasScored = false;
@@ -13,6 +14,7 @@ public class BallController : MonoBehaviour
     {
         skiBallMgr = FindObjectOfType<SkeeballManager>();
         milkCansMgr = FindObjectOfType<MilkCansManager>();
+        audioMgr = FindObjectOfType<AudioManager>();
     }
 
     IEnumerator ResetBall()
@@ -65,8 +67,13 @@ public class BallController : MonoBehaviour
                 Debug.Log("You get points!");
                 skiBallMgr.AwardPoints(newPoints);
                 hasScored = true;
+                audioMgr.PlayAudio("SkeeballScore");
             }
             
+        }
+        if(other.CompareTag("MilkCan"))
+        {
+            audioMgr.PlayAudio("BottleHit4");
         }
 
     }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class MilkCanController : MonoBehaviour
 {
     public MilkCansManager milkCansMgr;
+    public AudioManager audioMgr;
 
     private Vector3 origPos;
     private Quaternion origRot;
@@ -17,6 +18,7 @@ public class MilkCanController : MonoBehaviour
     private void Awake()
     {
         milkCansMgr = FindObjectOfType<MilkCansManager>();
+        audioMgr = FindObjectOfType<AudioManager>();
         rb = GetComponent<Rigidbody>();
     }
     private void Start()
@@ -34,6 +36,7 @@ public class MilkCanController : MonoBehaviour
                 isKnockedOver = true;
                 milkCansMgr.AddPointsForMilkCans(cansPoints);
                 milkCansMgr.ResetBottles();
+                audioMgr.PlayAudio("BottleHit1");
             }
         }
     }
