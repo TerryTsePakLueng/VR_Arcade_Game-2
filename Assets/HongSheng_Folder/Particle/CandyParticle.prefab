@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6857807445830613823}
   - component: {fileID: 682185057267174082}
   m_Layer: 0
-  m_Name: P_3
+  m_Name: CandyParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7088127209641692336}
   - component: {fileID: 7088127209641692343}
   m_Layer: 0
-  m_Name: "boom\uFF01"
+  m_Name: explosionWithNameParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
