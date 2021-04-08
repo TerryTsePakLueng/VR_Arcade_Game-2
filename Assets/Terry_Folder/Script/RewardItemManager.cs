@@ -62,6 +62,7 @@ public class RewardItemManager : MonoBehaviour
         if (tradeMgr.totalCyberShards >= rewardItems[currentItemIndex].itemCost)
         {
             tradeMgr.totalCyberShards -= rewardItems[currentItemIndex].itemCost;
+            tradeMgr.totalCyberShardsTXT.text = tradeMgr.totalCyberShards.ToString();
             if (rewardItems[currentItemIndex].itemPrefab != null)
             {
                 Instantiate(rewardItems[currentItemIndex].itemPrefab, itemSpawnPoint);
