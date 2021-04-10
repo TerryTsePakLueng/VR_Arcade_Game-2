@@ -17,7 +17,6 @@ public class RewardItemManager : MonoBehaviour
 
     public int currentItemIndex = 0;
 
-    public Transform itemSpawnPoint;
     public Transform particleSpawnPoint;
 
     public GameObject candyExplosionParticle;
@@ -69,7 +68,8 @@ public class RewardItemManager : MonoBehaviour
             if (rewardItems[currentItemIndex].itemPrefab != null)
             {
                 Instantiate(candyExplosionParticle, particleSpawnPoint);
-                Instantiate(rewardItems[currentItemIndex].itemPrefab, itemSpawnPoint);
+                GameObject rewardGO = Instantiate(rewardItems[currentItemIndex].itemPrefab, new Vector3(8.992345f, 1.565153f, -1.372867f), 
+                    Quaternion.Euler(new Vector3(0, -90, 0)));
             }
             else
             {
