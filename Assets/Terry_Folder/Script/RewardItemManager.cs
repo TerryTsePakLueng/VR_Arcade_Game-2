@@ -18,6 +18,9 @@ public class RewardItemManager : MonoBehaviour
     public int currentItemIndex = 0;
 
     public Transform itemSpawnPoint;
+    public Transform particleSpawnPoint;
+
+    public GameObject candyExplosionParticle;
 
     private void Awake()
     {
@@ -65,6 +68,7 @@ public class RewardItemManager : MonoBehaviour
             tradeMgr.totalCyberShardsTXT.text = tradeMgr.totalCyberShards.ToString();
             if (rewardItems[currentItemIndex].itemPrefab != null)
             {
+                Instantiate(candyExplosionParticle, particleSpawnPoint);
                 Instantiate(rewardItems[currentItemIndex].itemPrefab, itemSpawnPoint);
             }
             else

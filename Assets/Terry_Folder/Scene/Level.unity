@@ -2166,6 +2166,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 225747377}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &226030828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 226030829}
+  m_Layer: 0
+  m_Name: ParticleSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &226030829
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226030828}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.008, y: -1.293, z: -30.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1590240304}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &237352220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10528,25 +10558,31 @@ MonoBehaviour:
       other than dough. '
     itemImage: {fileID: 21300000, guid: 08aee9d4ab9c65f44a86135f443a43e1, type: 3}
     itemCost: 10
-    itemPrefab: {fileID: 0}
+    itemPrefab: {fileID: 8088055549632879370, guid: 9e6ae77ce5f88504abdee5374f3c8e4c,
+      type: 3}
   - itemName: Air
     itemDescription: Mix of gases.
     itemImage: {fileID: 21300000, guid: ceea5e44446f46f429d8e0db16812249, type: 3}
-    itemCost: 0
-    itemPrefab: {fileID: 0}
+    itemCost: 1
+    itemPrefab: {fileID: 6853891613139171137, guid: 4da335fc917f53548b461c2a67ff6885,
+      type: 3}
   - itemName: Dodge Challenger SRT
     itemDescription: This car is the ULTIMATE flex! You won't be able to drive it
       but being able to lift it and throw it shows how addicted, bored and supportive
       you are about our game. You have reached Chad level!
     itemImage: {fileID: 21300000, guid: 998ce1daf7732c94580fdf14cc46255d, type: 3}
     itemCost: 300
-    itemPrefab: {fileID: 0}
+    itemPrefab: {fileID: 1806839474701031128, guid: 93c0f489532f95d44bab17e0510f93c8,
+      type: 3}
   itemNameTXT: {fileID: 2094147248}
   itemDescriptionTXT: {fileID: 92110380}
   itemIMG: {fileID: 775445885}
   itemCostTXT: {fileID: 1185795623}
   currentItemIndex: 0
   itemSpawnPoint: {fileID: 1811012542}
+  particleSpawnPoint: {fileID: 226030829}
+  candyExplosionParticle: {fileID: 945148461733942957, guid: 77cf81933ec7fd744a32284f41365245,
+    type: 3}
 --- !u!4 &1110793862
 Transform:
   m_ObjectHideFlags: 0
@@ -14421,7 +14457,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.990566, g: 0, b: 0.61170125, a: 1}
-  m_Intensity: 15
+  m_Intensity: 10
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -14463,7 +14499,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -16653,6 +16689,7 @@ Transform:
   - {fileID: 1773787146}
   - {fileID: 175060434}
   - {fileID: 1811012542}
+  - {fileID: 226030829}
   m_Father: {fileID: 1966094555}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19292,7 +19329,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811012541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.126, y: -1.155, z: -49.6}
+  m_LocalPosition: {x: 0.008, y: -0.876, z: -30.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1590240304}
