@@ -10494,7 +10494,7 @@ MonoBehaviour:
     itemDescription: Purchasing this ticket will officially certifies that you have
       beaten the game! We thank you for playing our game!
     itemImage: {fileID: 21300000, guid: c8e1b2ddf144db94a8872426a83e281b, type: 3}
-    itemCost: 20
+    itemCost: 1
     itemPrefab: {fileID: 0}
   - itemName: Pie-NO-apple Pizza
     itemDescription: 'This Pizza isn''t a pizza. It is a pie filled with nothing
@@ -10506,7 +10506,7 @@ MonoBehaviour:
   - itemName: Air
     itemDescription: Mix of gases.
     itemImage: {fileID: 21300000, guid: ceea5e44446f46f429d8e0db16812249, type: 3}
-    itemCost: 1
+    itemCost: 2
     itemPrefab: {fileID: 6853891613139171137, guid: 4da335fc917f53548b461c2a67ff6885,
       type: 3}
   - itemName: Dodge Challenger SRT
@@ -10514,13 +10514,15 @@ MonoBehaviour:
       but being able to lift it and throw it shows how addicted, bored and supportive
       you are about our game. You have reached Chad level!
     itemImage: {fileID: 21300000, guid: 998ce1daf7732c94580fdf14cc46255d, type: 3}
-    itemCost: 0
+    itemCost: 300
     itemPrefab: {fileID: 1806839474701031128, guid: 93c0f489532f95d44bab17e0510f93c8,
       type: 3}
   itemNameTXT: {fileID: 2094147248}
   itemDescriptionTXT: {fileID: 92110380}
   itemIMG: {fileID: 775445885}
   itemCostTXT: {fileID: 1185795623}
+  titleImage: {fileID: 1909103958}
+  creditSprite: {fileID: 21300000, guid: e4eacc7b1644e124a8354f65e6b3e328, type: 3}
   currentItemIndex: 0
   particleSpawnPoint: {fileID: 226030829}
   candyExplosionParticle: {fileID: 945148461733942957, guid: 77cf81933ec7fd744a32284f41365245,
@@ -14054,79 +14056,79 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfxAudioClips:
   - name: BalloonPop
-    audioClip: {fileID: 8300000, guid: e317b9c6af3d5f74189eab2a10513b35, type: 3}
+    audioClip: {fileID: 8300000, guid: 3c175ca9bbb94ec4f8913e59ee43d27c, type: 3}
     volume: 0.2
     pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: BottleHit1
-    audioClip: {fileID: 8300000, guid: 208bbf8b87ed3e64abc79975839fc9c0, type: 3}
+    audioClip: {fileID: 8300000, guid: 718824e5ec2e17647ba786aa2ffbb2eb, type: 3}
     volume: 0.5
     pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: BottleHit2
-    audioClip: {fileID: 8300000, guid: 289559a2d4a8e1e4cb3ea131eb541f1a, type: 3}
+    audioClip: {fileID: 8300000, guid: 312c5aa9deaef834a802595942b92e6e, type: 3}
     volume: 0.5
     pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: BottleHit3
-    audioClip: {fileID: 8300000, guid: 5f2966fc3bd5ea242928f0367da17143, type: 3}
+    audioClip: {fileID: 8300000, guid: b550513002709f4419606fee11e81cbb, type: 3}
     volume: 0.5
     pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: BottleHit4
-    audioClip: {fileID: 8300000, guid: da3398e5489d90b4b8fb691bb8c72a59, type: 3}
+    audioClip: {fileID: 8300000, guid: 9a79adc25b6a7184d8a6b4a29bad41c8, type: 3}
     volume: 0.5
     pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: BottleHit5
-    audioClip: {fileID: 8300000, guid: 6252ad0d082c63b4bb13661c38352b37, type: 3}
+    audioClip: {fileID: 8300000, guid: b22867be0e9bfc346a0d17b9cd15c5cd, type: 3}
     volume: 0.5
     pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: GameOver
-    audioClip: {fileID: 8300000, guid: 0e8e7d60a04a05247b90dc7d86661d29, type: 3}
+    audioClip: {fileID: 8300000, guid: 1a19cf00a38da024e966bf956a2d2f06, type: 3}
     volume: 0.5
     pitch: 0
     loop: 0
     audioSource: {fileID: 0}
   - name: GameStart
-    audioClip: {fileID: 8300000, guid: e79649d025679d148be1bd1533b0ea7f, type: 3}
+    audioClip: {fileID: 8300000, guid: 62aae616cc0526645befc0d33e01bdce, type: 3}
     volume: 0.5
     pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: GunEmpty
-    audioClip: {fileID: 8300000, guid: 379f1037516ec164aacac17318cc7fcc, type: 3}
+    audioClip: {fileID: 8300000, guid: 3245e43be1b1db445af1cc52e6308f12, type: 3}
     volume: 0.5
     pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: GunShot
-    audioClip: {fileID: 8300000, guid: d61d5613d9f4bf54fbc22558a242df33, type: 3}
+    audioClip: {fileID: 8300000, guid: 2d55bf152c6e2ab45ae19f2648dc0148, type: 3}
     volume: 0.5
     pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: SkeeballRolling
-    audioClip: {fileID: 8300000, guid: 0acbcbbfc0bbe0f4b8130145dcd0f703, type: 3}
+    audioClip: {fileID: 8300000, guid: b6d847e7c6fb0694e8e18f65fc0a813f, type: 3}
     volume: 0.15
     pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: SkeeballScore
-    audioClip: {fileID: 8300000, guid: e6ce5ef95a3ecef4d83852f3cec4ce23, type: 3}
+    audioClip: {fileID: 8300000, guid: dd66751ae6154e440885da611f08cefa, type: 3}
     volume: 0.5
     pitch: 0.5
     loop: 0
     audioSource: {fileID: 0}
   - name: UIButton
-    audioClip: {fileID: 8300000, guid: f22477bfea1b2d74e9c5646196bed67f, type: 3}
+    audioClip: {fileID: 8300000, guid: 5af53c5b41de96041896e183914f889e, type: 3}
     volume: 0.5
     pitch: 0.5
     loop: 0
@@ -14272,7 +14274,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d4261a258acd10248a3bc110ca76d776, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.03
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -14825,7 +14827,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -20500,8 +20502,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10.700012, y: 9.299988}
-  m_SizeDelta: {x: -130.95062, y: -176.20203}
+  m_AnchoredPosition: {x: -33.96, y: 9.299988}
+  m_SizeDelta: {x: -80.543945, y: -176.20203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1909103958
 MonoBehaviour:

@@ -14,6 +14,8 @@ public class RewardItemManager : MonoBehaviour
     public Text itemDescriptionTXT;
     public Image itemIMG;
     public Text itemCostTXT;
+    public Image titleImage;
+    public Sprite creditSprite;
 
     public int currentItemIndex = 0;
 
@@ -73,6 +75,8 @@ public class RewardItemManager : MonoBehaviour
             }
             else
             {
+                Instantiate(candyExplosionParticle, particleSpawnPoint);
+                titleImage.sprite = creditSprite;
                 Debug.Log("No Physical Item For That Item!");
             }
         }

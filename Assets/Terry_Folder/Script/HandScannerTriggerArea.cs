@@ -17,10 +17,12 @@ public class HandScannerTriggerArea : MonoBehaviour
         {
             tradeMgr.ScrollDownTradingDisplay();
             tradeMgr.UpdateTotalPoints();
+            LookForLazer.instance.TurnOnOffLazer();
         }
         else if (tradeMgr.scrollingAnimator.GetBool("isScrolled"))
         {
             tradeMgr.ScrollUpTradingDisplay();
+            LookForLazer.instance.TurnOnOffLazer();
         }
     }
 }
