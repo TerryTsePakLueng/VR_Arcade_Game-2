@@ -10,8 +10,7 @@ public class GunController : MonoBehaviour
     public AudioManager audioManager;
 
     public Transform gunNozzle;
-    public ParticleSystem muzzleFlash;
-    public ParticleSystem balloonPop;
+    public GameObject muzzleFlash;
 
     public bool isHoldingGun = false;
     private void Start()
@@ -42,6 +41,7 @@ public class GunController : MonoBehaviour
                 if (gunNozzle != null)
                 {
                     audioManager.PlayAudio("GunShot");
+                    Instantiate(muzzleFlash, gunNozzle.position, Quaternion.identity);
                     Transform newBullet = opm.GetObject(opm.allCreatedbullets).transform;
                     newBullet.transform.position = gunNozzle.transform.position;
                     newBullet.transform.rotation = gunNozzle.transform.rotation;

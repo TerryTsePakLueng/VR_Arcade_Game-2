@@ -801,9 +801,7 @@ MonoBehaviour:
   balloonGameMgr: {fileID: 0}
   audioManager: {fileID: 0}
   gunNozzle: {fileID: 2399941680016984278}
-  muzzleFlash: {fileID: 0}
-  balloonPop: {fileID: 0}
-  muzzleFlashParticle: {fileID: 5684101560064042047, guid: dbf420766cbe4464d8f895c7aaf4c076,
+  muzzleFlash: {fileID: 5684101560064042047, guid: dbf420766cbe4464d8f895c7aaf4c076,
     type: 3}
   isHoldingGun: 0
 --- !u!1 &2052781377927331251
