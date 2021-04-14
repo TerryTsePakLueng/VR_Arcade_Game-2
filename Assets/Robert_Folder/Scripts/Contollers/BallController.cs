@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
+    public ParticleSystem skeeBallScoreParticle;
+
     public SkeeballManager skiBallMgr;
     public MilkCansManager milkCansMgr;
     public AudioManager audioMgr;
@@ -68,6 +70,8 @@ public class BallController : MonoBehaviour
                 skiBallMgr.AwardPoints(newPoints);
                 hasScored = true;
                 audioMgr.PlayAudio("SkeeballScore");
+                skeeBallScoreParticle.transform.position = gameObject.transform.position;
+                skeeBallScoreParticle.Play();
             }
             
         }

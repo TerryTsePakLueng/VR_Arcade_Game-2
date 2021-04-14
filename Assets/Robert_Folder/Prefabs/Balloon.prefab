@@ -106,7 +106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8136224666139831295}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.039, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1101776415615218804}
@@ -139,6 +139,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balloonGameMgr: {fileID: 0}
+  audioMgr: {fileID: 0}
+  balloonPopParticle: {fileID: 913967136079834183, guid: efc3c113618099f43bf475b2a1790a28,
+    type: 3}
   balloonMaxSpeed: 3
   balloonSpeed: 1.11
   balloonPoints: 25

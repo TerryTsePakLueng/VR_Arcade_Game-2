@@ -7,6 +7,8 @@ public class BalloonController : MonoBehaviour
     public BalloonGameManager balloonGameMgr;
     public AudioManager audioMgr;
 
+    public GameObject balloonPopParticle;
+
     public float balloonMaxSpeed;
     public float balloonSpeed;
     public int balloonPoints;
@@ -43,6 +45,7 @@ public class BalloonController : MonoBehaviour
         rb.velocity = Vector3.zero;
         gameObject.SetActive(false);
         audioMgr.PlayAudio("BalloonPop");
+        Instantiate(balloonPopParticle, this.transform.position, Quaternion.identity);
     }
     private void OnCollisionEnter(Collision collision)
     {
