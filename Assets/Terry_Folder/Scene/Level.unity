@@ -9123,7 +9123,7 @@ PrefabInstance:
     - target: {fileID: 8822911384272920911, guid: f4864b6fe99ea6d48964ce91e8e22e01,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8822911384272920911, guid: f4864b6fe99ea6d48964ce91e8e22e01,
         type: 3}
@@ -12565,8 +12565,8 @@ MonoBehaviour:
   onButtonDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 164664881}
+        m_TargetAssemblyTypeName: SkeeballManager, Assembly-CSharp
         m_MethodName: StartSkeeBallGame
         m_Mode: 1
         m_Arguments:
@@ -22159,8 +22159,8 @@ MonoBehaviour:
   onButtonDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 1485786027}
+        m_TargetAssemblyTypeName: SkeeballManager, Assembly-CSharp
         m_MethodName: StartSkeeBallGame
         m_Mode: 1
         m_Arguments:
@@ -27045,8 +27045,8 @@ MonoBehaviour:
   onButtonDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 1565350869}
+        m_TargetAssemblyTypeName: SkeeballManager, Assembly-CSharp
         m_MethodName: StartSkeeBallGame
         m_Mode: 1
         m_Arguments:
