@@ -234,7 +234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &71563693
 Transform:
   m_ObjectHideFlags: 0
@@ -2047,7 +2047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b24a8d3670e74d43a8c278d51b20e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lazer: {fileID: 0}
+  lazer: {fileID: 1757640007}
 --- !u!4 &653891052
 Transform:
   m_ObjectHideFlags: 0
@@ -3252,7 +3252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1344017779
 Transform:
   m_ObjectHideFlags: 0
@@ -3401,7 +3401,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 1032.9653, y: 193.681}
   savedColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  savedTextUV0: {x: 0.13867188, y: 0.20117188}
+  savedTextUV0: {x: 0, y: 0.001953125}
   savedFill: 0
 --- !u!114 &1425634753
 MonoBehaviour:
@@ -4635,6 +4635,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Watch_FBX
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188252868528182207, guid: adda773ba6efdaf4092d47cca7eb7dfb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5188252868528182207, guid: adda773ba6efdaf4092d47cca7eb7dfb,
         type: 3}

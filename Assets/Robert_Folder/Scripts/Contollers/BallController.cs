@@ -70,8 +70,8 @@ public class BallController : MonoBehaviour
                 skiBallMgr.AwardPoints(newPoints);
                 hasScored = true;
                 audioMgr.PlayAudio("SkeeballScore");
-                skeeBallScoreParticle.transform.position = gameObject.transform.position;
-                skeeBallScoreParticle.Play();
+                //skeeBallScoreParticle.transform.position = gameObject.transform.position;
+                //skeeBallScoreParticle.Play();
             }
             
         }

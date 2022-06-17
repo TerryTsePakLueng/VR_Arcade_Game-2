@@ -24,6 +24,7 @@ public class LookForLazer : MonoBehaviour
     public void Start()
     {
         StartCoroutine(WaitFor1Sec());
+        TurnOnOffLazer();
     }
 
     IEnumerator WaitFor1Sec()
